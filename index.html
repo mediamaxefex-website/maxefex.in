@@ -2,111 +2,78 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Max Efex | Luxury Creative Studio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Efex | Creative Visual Solutions</title>
 
 <style>
 body{
-  margin:0;
-  font-family:'Segoe UI', Arial, sans-serif;
-  background:#070707;
-  color:#e6e6e6;
+    margin:0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:#0b0b0b;
+    color:#e6e6e6;
 }
-
 .container{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
+    max-width:1100px;
+    margin:auto;
+    padding:60px 20px;
 }
-
-.gold{
-  background:linear-gradient(45deg,#d4af37,#fff1a8,#c9a227);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+h1{
+    font-size:48px;
+    margin-bottom:10px;
+    color:#d4af37;
+    letter-spacing:2px;
 }
-
-.hero{
-  text-align:center;
-  padding:60px 20px;
+h2{
+    color:#d4af37;
+    margin-top:60px;
+    font-size:28px;
 }
-
-.hero img{
-  max-width:300px;
+.tagline{
+    font-size:20px;
+    color:#bbb;
+    margin-bottom:40px;
 }
-
-.hero h1{
-  font-size:44px;
-  margin:25px 0 10px;
-}
-
-.hero p{
-  font-size:18px;
-  color:#aaa;
-}
-
-.btns{
-  margin-top:30px;
-}
-
-.btn{
-  display:inline-block;
-  padding:14px 30px;
-  margin:8px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:600;
-  color:#000;
-  background:linear-gradient(45deg,#d4af37,#fff1a8,#c9a227);
-  transition:0.3s;
-}
-
-.btn:hover{
-  transform:scale(1.05);
-}
-
-.section{
-  margin:70px 0;
-}
-
-.section h2{
-  font-size:32px;
-  margin-bottom:25px;
-  border-left:5px solid #d4af37;
-  padding-left:15px;
-}
-
 .services{
-  line-height:1.9;
-  color:#ccc;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    margin-top:30px;
 }
-
-.services b{
-  color:#fff;
+.service-box{
+    background:#141414;
+    padding:25px;
+    border:1px solid #222;
+    border-radius:10px;
 }
-
-.image-box img{
-  width:100%;
-  border-radius:16px;
-  box-shadow:0 0 40px rgba(212,175,55,0.18);
+.service-box h3{
+    color:#d4af37;
+    margin-bottom:10px;
 }
-
 .contact{
-  background:#0f0f0f;
-  padding:35px;
-  border-radius:18px;
-  border:1px solid rgba(212,175,55,0.3);
+    margin-top:60px;
+    background:#141414;
+    padding:30px;
+    border-radius:10px;
 }
-
 .contact a{
-  color:#d4af37;
-  text-decoration:none;
+    color:#d4af37;
+    text-decoration:none;
 }
-
-.footer{
-  text-align:center;
-  margin-top:60px;
-  font-size:14px;
-  color:#777;
+footer{
+    text-align:center;
+    padding:20px;
+    color:#777;
+    font-size:14px;
+    border-top:1px solid #222;
+}
+.whatsapp{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 24px;
+    background:#d4af37;
+    color:#000;
+    border-radius:30px;
+    font-weight:bold;
 }
 </style>
 </head>
@@ -115,67 +82,54 @@ body{
 
 <div class="container">
 
-  <!-- HERO -->
-  <div class="hero">
-    <img src="images/banner.jpg" alt="Max Efex Banner">
-    <h1 class="gold">Max Efex</h1>
-    <p>Creative Visual Solutions</p>
+<h1>MAX EFEX</h1>
+<div class="tagline">Creative Visual Solutions</div>
 
-    <div class="btns">
-      <a class="btn" href="https://wa.me/919961699196" target="_blank">💬 WhatsApp</a>
-      <a class="btn" href="https://instagram.com/dezigner_maxefex" target="_blank">📸 Instagram</a>
+<h2>Our Services</h2>
+<div class="services">
+    <div class="service-box">
+        <h3>Website Design</h3>
+        <p>Modern, responsive, and conversion-focused website design.</p>
     </div>
-  </div>
-
-  <!-- SERVICES -->
-  <div class="section">
-    <h2 class="gold">Our Services</h2>
-    <div class="services">
-      <b>Website Design</b> – UI/UX focused, responsive, conversion optimized websites.<br><br>
-      <b>Logo Design</b> – Unique concepts, revisions & final delivery in all formats.<br><br>
-      <b>Illustration & Iconography</b> – Custom illustrations and icons.<br><br>
-      <b>Branding & Identity</b> – Logo, color palette, typography & brand systems.<br><br>
-      <b>Marketing Materials</b> – Posters, flyers & social media creatives.<br><br>
-      <b>Brochure Design</b> – Professional brochure layouts.<br><br>
-      <b>Packaging Design</b> – Premium and functional packaging.<br><br>
-      <b>Print Design</b> – Magazines, catalogs & reports.<br><br>
-      <b>Cover Page Design</b> – Eye-catching digital & print covers.
+    <div class="service-box">
+        <h3>Logo Design</h3>
+        <p>Unique, memorable logos that define your brand identity.</p>
     </div>
-  </div>
+    <div class="service-box">
+        <h3>Branding & Identity</h3>
+        <p>Complete branding solutions including colors, fonts, and visuals.</p>
+    </div>
+    <div class="service-box">
+        <h3>Marketing Creatives</h3>
+        <p>Posters, flyers, social media designs & promotional materials.</p>
+    </div>
+    <div class="service-box">
+        <h3>Print Design</h3>
+        <p>Brochures, visiting cards, banners & print-ready creatives.</p>
+    </div>
+    <div class="service-box">
+        <h3>Cover Page Design</h3>
+        <p>Professional covers for Instagram, Facebook & branding.</p>
+    </div>
+</div>
 
-  <!-- SERVICES IMAGE -->
-  <div class="section image-box">
-    <img src="images/services.jpg" alt="Max Efex Services">
-  </div>
+<h2>Contact</h2>
+<div class="contact">
+    <p>📧 mediamaxefex@gmail.com</p>
+    <p>📧 studiomaxefex@gmail.com</p>
+    <p>📸 Instagram: <a href="https://instagram.com/dezigner_maxefex" target="_blank">@dezigner_maxefex</a></p>
+    <p>🖼 Pixabay: <a href="https://pixabay.com/users/maxefex-5447583/" target="_blank">Max Efex</a></p>
 
-  <!-- CONTACT -->
-  <div class="section contact">
-    <h2 class="gold">Contact</h2>
-
-    📧 mediamaxefex@gmail.com<br>
-    📧 studiomaxefex@gmail.com<br><br>
-
-    📸 Instagram:
-    <a href="https://instagram.com/dezigner_maxefex" target="_blank">
-      dezigner_maxefex
-    </a><br><br>
-
-    🖼 Pixabay:
-    <a href="https://pixabay.com/users/maxefex-5447583/" target="_blank">
-      View Portfolio
-    </a><br><br>
-
-    📞 WhatsApp:
-    <a href="https://wa.me/919961699196" target="_blank">
-      +91 99616 99196
+    <a class="whatsapp" href="https://wa.me/919961699196" target="_blank">
+        WhatsApp Us
     </a>
-  </div>
-
-  <div class="footer">
-    © 2025 Max Efex · Luxury Creative Studio
-  </div>
+</div>
 
 </div>
+
+<footer>
+© 2025 Max Efex. All Rights Reserved.
+</footer>
 
 </body>
 </html>
