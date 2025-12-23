@@ -1,193 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Max Efex | Creative Visual Solutions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAX EFEX | Creative Visual Solutions</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<style>
-body{
-  margin:0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background:#0b0b0b;
-  color:#eaeaea;
-}
+    <style>
+        /* --- THEME SETTINGS --- */
+        :root {
+            /* The exact gold gradient */
+            --gold-gradient: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            --gold-color: #d4af37;
+            --bg-dark: #0a0a0a;
+            --card-bg: #111111;
+            --text-light: #ffffff;
+            --text-muted: #aaaaaa;
+        }
 
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:60px 20px;
-}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-h1{
-  color:#d4af37;
-  font-size:44px;
-  letter-spacing:4px;
-  margin-bottom:5px;
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
 
-.tagline{
-  color:#aaa;
-  margin-bottom:60px;
-}
+        /* --- MAIN CARD DESIGN --- */
+        .container-card {
+            background: var(--card-bg);
+            max-width: 500px;
+            width: 100%;
+            padding: 40px 30px;
+            border-radius: 25px;
+            text-align: center;
+            /* Luxurious Gold Glow */
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.25);
+            border: 1px solid #222;
+        }
 
-h2{
-  color:#d4af37;
-  margin:60px 0 30px;
-  font-size:28px;
-}
+        /* --- TYPOGRAPHY --- */
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 5px;
+            font-weight: 700;
+            /* Gold Gradient Text */
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-.services-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:25px;
-}
+        h2 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold-color);
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
 
-.card{
-  background:#141414;
-  padding:25px;
-  border-radius:14px;
-  border:1px solid #1f1f1f;
-  transition:.3s;
-}
+        /* --- SERVICES LIST --- */
+        .services-list {
+            text-align: left;
+            margin: 20px 0 30px 0;
+            display: inline-block;
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 15px;
+            width: 100%;
+        }
 
-.card:hover{
-  transform:translateY(-6px);
-  border-color:#d4af37;
-}
+        .services-list li {
+            list-style: none;
+            margin-bottom: 12px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+        }
 
-.card h3{
-  color:#d4af37;
-  margin-bottom:10px;
-}
+        .services-list li:last-child { margin-bottom: 0; }
 
-.card p{
-  font-size:15px;
-  line-height:1.6;
-}
+        .services-list i {
+            color: var(--gold-color);
+            margin-right: 15px;
+            font-size: 1.1rem;
+        }
 
-.contact-box{
-  background:#141414;
-  padding:35px;
-  border-radius:18px;
-  max-width:520px;
-  border:1px solid #1f1f1f;
-}
+        /* --- BUTTONS --- */
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
 
-.contact-box p{
-  margin:12px 0;
-  font-size:15px;
-}
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            font-size: 1rem;
+        }
 
-.contact-box strong{
-  color:#d4af37;
-}
+        /* Gold Button */
+        .btn-gold {
+            background: var(--gold-gradient);
+            color: #000;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
 
-.whatsapp-btn{
-  display:inline-block;
-  margin-top:25px;
-  padding:14px 28px;
-  background:#d4af37;
-  color:#000;
-  text-decoration:none;
-  font-weight:700;
-  border-radius:30px;
-}
+        /* Outline Button */
+        .btn-outline {
+            border: 1px solid var(--gold-color);
+            color: var(--gold-color);
+            background: transparent;
+        }
 
-.whatsapp-btn:hover{
-  background:#b8962e;
-}
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn-outline:hover {
+           background: var(--gold-color);
+           color: #000;
+        }
 
-.whatsapp-float{
-  position:fixed;
-  right:25px;
-  bottom:25px;
-  background:#25D366;
-  color:#fff;
-  font-size:26px;
-  padding:14px 18px;
-  border-radius:50%;
-  text-decoration:none;
-  box-shadow:0 10px 25px rgba(0,0,0,.5);
-}
-
-footer{
-  margin-top:80px;
-  text-align:center;
-  font-size:14px;
-  color:#777;
-}
-</style>
+        /* --- FOOTER --- */
+        .footer {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #666;
+            border-top: 1px solid #222;
+            padding-top: 20px;
+        }
+        
+        .footer a { color: #888; text-decoration: none; }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
+    <div class="container-card">
+        <h1>MAX EFEX</h1>
+        <h2>Creative Visual Solutions</h2>
 
-  <header>
-    <h1>MAX EFEX</h1>
-    <p class="tagline">Creative Visual Solutions</p>
-  </header>
+        <ul class="services-list">
+            <li><i class="fas fa-file-export"></i> <b>Ready to Print Files</b></li>
+            <li><i class="fas fa-check"></i> Website & Logo Design</li>
+            <li><i class="fas fa-check"></i> Branding & Identity</li>
+            <li><i class="fas fa-check"></i> Social Media Creatives</li>
+        </ul>
 
-  <section>
-    <h2>Our Services</h2>
+        <div class="btn-group">
+            <a href="https://wa.me/919961699196" class="btn btn-gold">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
 
-    <div class="services-grid">
-      <div class="card">
-        <h3>Website Design</h3>
-        <p>Modern, responsive and conversion-focused website designs.</p>
-      </div>
+            <a href="https://pixabay.com/users/maxefex-5447583/" class="btn btn-outline" target="_blank">
+                <i class="fas fa-images"></i> View Portfolio (Pixabay)
+            </a>
 
-      <div class="card">
-        <h3>Logo Design</h3>
-        <p>Unique and memorable logos that define your brand identity.</p>
-      </div>
+            <a href="https://www.instagram.com/dezigner_maxefex?igsh=MXgwbjZyb2Y1bWhobA==" class="btn btn-outline" style="border-color: #444; color: #ccc;" target="_blank">
+                <i class="fab fa-instagram"></i> @dezigner_maxefex
+            </a>
 
-      <div class="card">
-        <h3>Branding & Identity</h3>
-        <p>Complete branding solutions including colors, fonts and visuals.</p>
-      </div>
+            <a href="tel:+919961699196" class="btn btn-outline" style="border: none; color: #888; font-size: 0.9rem;">
+                <i class="fas fa-phone-alt"></i> +91 99616 99196
+            </a>
+        </div>
 
-      <div class="card">
-        <h3>Marketing Creatives</h3>
-        <p>Posters, flyers, social media designs and promotions.</p>
-      </div>
-
-      <div class="card">
-        <h3>Print Design</h3>
-        <p>Brochures, visiting cards, banners and print-ready creatives.</p>
-      </div>
-
-      <div class="card">
-        <h3>Cover Page Design</h3>
-        <p>Professional Instagram & Facebook cover designs.</p>
-      </div>
+        <div class="footer">
+            <p>Based in Changanassery, Kerala</p>
+            <p style="margin-top: 5px;">
+                <a href="mailto:mediamaxefex@gmail.com">mediamaxefex@gmail.com</a>
+            </p>
+        </div>
     </div>
-  </section>
-
-  <section>
-    <h2>Contact</h2>
-
-    <div class="contact-box">
-      <p>📞 <strong>+91 9961699196</strong></p>
-      <p>📧 mediamaxefex@gmail.com</p>
-      <p>📧 studiomaxefex@gmail.com</p>
-      <p>📸 Instagram: <strong>@dezigner_maxefex</strong></p>
-      <p>🖼 Pixabay: <strong>Max Efex</strong></p>
-
-      <a class="whatsapp-btn" href="https://wa.me/919961699196" target="_blank">
-        💬 Chat on WhatsApp
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    © 2025 Max Efex · Creative Visual Solutions
-  </footer>
-
-</div>
-
-<a class="whatsapp-float" href="https://wa.me/919961699196" target="_blank">💬</a>
 
 </body>
 </html>
