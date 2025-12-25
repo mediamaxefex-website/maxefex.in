@@ -4,28 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAX EFEX | Creative Visual Solutions</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <style>
-        /* --- THEME SETTINGS --- */
-        :root {
-            /* The exact gold gradient */
-            --gold-gradient: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
-            --gold-color: #d4af37;
-            --bg-dark: #0a0a0a;
-            --card-bg: #111111;
-            --text-light: #ffffff;
-            --text-muted: #aaaaaa;
+        /* --- RESET & BASIC SETUP --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-light);
+            background-color: #050505;
+            background-image: 
+                linear-gradient(45deg, #111 25%, transparent 25%, transparent 75%, #111 75%, #111),
+                linear-gradient(45deg, #111 25%, transparent 25%, transparent 75%, #111 75%, #111);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+            color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -33,165 +29,224 @@
             padding: 20px;
         }
 
-        /* --- MAIN CARD DESIGN --- */
-        .container-card {
-            background: var(--card-bg);
-            max-width: 500px;
+        /* --- MAIN CONTAINER --- */
+        .card-container {
+            background: rgba(20, 20, 20, 0.95);
             width: 100%;
+            max-width: 420px;
+            border-radius: 20px;
             padding: 40px 30px;
-            border-radius: 25px;
+            box-shadow: 0 0 20px rgba(255, 87, 34, 0.2);
+            border: 1px solid #333;
             text-align: center;
-            /* Luxurious Gold Glow */
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.25);
-            border: 1px solid #222;
+            position: relative;
+            overflow: hidden;
         }
 
-        /* --- TYPOGRAPHY --- */
-        h1 {
-            font-family: 'Playfair Display', serif;
+        /* Top Orange Accent Line */
+        .card-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #ff4e00, #ff0000);
+        }
+
+        /* --- LOGO AREA --- */
+        .logo-box {
+            margin-bottom: 20px;
+        }
+
+        .logo-text {
             font-size: 3rem;
-            margin-bottom: 5px;
-            font-weight: 700;
-            /* Gold Gradient Text */
-            background: var(--gold-gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: -1px;
+            background: linear-gradient(to right, #ff6600, #ff3300);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
         }
 
-        h2 {
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--gold-color);
-            margin-bottom: 25px;
-            font-weight: 400;
+        .tagline {
+            font-size: 0.9rem;
+            color: #ccc;
+            letter-spacing: 1px;
+            margin-top: 5px;
+            font-weight: 500;
         }
 
         /* --- SERVICES LIST --- */
-        .services-list {
-            text-align: left;
-            margin: 20px 0 30px 0;
-            display: inline-block;
-            background: rgba(255,255,255,0.05);
+        .services-box {
+            background-color: #1a1a1a;
+            border-radius: 12px;
             padding: 20px;
-            border-radius: 15px;
-            width: 100%;
+            margin: 30px 0;
+            text-align: left;
+            border-left: 3px solid #ff4e00;
         }
 
-        .services-list li {
-            list-style: none;
-            margin-bottom: 12px;
-            color: var(--text-muted);
-            font-size: 0.95rem;
+        .services-box h3 {
+            color: #ff4e00;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .service-item {
             display: flex;
             align-items: center;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: #eee;
         }
 
-        .services-list li:last-child { margin-bottom: 0; }
-
-        .services-list i {
-            color: var(--gold-color);
-            margin-right: 15px;
-            font-size: 1.1rem;
+        .service-item i {
+            color: #ff4e00;
+            margin-right: 12px;
+            font-size: 0.8rem;
         }
 
         /* --- BUTTONS --- */
-        .btn-group {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
         .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding: 14px;
-            border-radius: 50px;
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
             text-decoration: none;
+            border-radius: 50px;
             font-weight: 600;
-            transition: 0.3s;
-            font-size: 1rem;
-        }
-
-        /* Gold Button */
-        .btn-gold {
-            background: var(--gold-gradient);
-            color: #000;
-            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
-        }
-
-        /* Outline Button */
-        .btn-outline {
-            border: 1px solid var(--gold-color);
-            color: var(--gold-color);
-            background: transparent;
+            transition: transform 0.2s ease;
         }
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
-        }
-        
-        .btn-outline:hover {
-           background: var(--gold-color);
-           color: #000;
         }
 
-        /* --- FOOTER --- */
-        .footer {
-            margin-top: 30px;
-            font-size: 0.8rem;
-            color: #666;
-            border-top: 1px solid #222;
-            padding-top: 20px;
+        .btn-whatsapp {
+            background: linear-gradient(90deg, #ff6600, #d32f2f);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 78, 0, 0.3);
+        }
+
+        .btn-portfolio {
+            background: transparent;
+            border: 2px solid #ff4e00;
+            color: #ff4e00;
         }
         
-        .footer a { color: #888; text-decoration: none; }
+        .btn-portfolio:hover {
+            background: #ff4e00;
+            color: white;
+        }
+
+        .btn-social {
+            background: #222;
+            color: white;
+            border: 1px solid #333;
+        }
+        
+        .btn-social:hover {
+            background: #333;
+        }
+
+        .btn i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* --- FOOTER / CONTACT --- */
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+            color: #aaa;
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+        
+        .contact-row a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-row a:hover {
+            color: #ff4e00;
+        }
+
+        .contact-row i {
+            color: #ff4e00;
+            margin-right: 8px;
+        }
+
+        .location {
+            font-size: 0.75rem;
+            color: #555;
+            margin-top: 15px;
+        }
+
     </style>
 </head>
 <body>
 
-    <div class="container-card">
-        <h1>MAX EFEX</h1>
-        <h2>Creative Visual Solutions</h2>
-
-        <ul class="services-list">
-            <li><i class="fas fa-file-export"></i> <b>Ready to Print Files</b></li>
-            <li><i class="fas fa-check"></i> Website & Logo Design</li>
-            <li><i class="fas fa-check"></i> Branding & Identity</li>
-            <li><i class="fas fa-check"></i> Social Media Creatives</li>
-        </ul>
-
-        <div class="btn-group">
-            <a href="https://wa.me/919961699196" class="btn btn-gold">
-                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-            </a>
-
-            <a href="https://pixabay.com/users/maxefex-5447583/" class="btn btn-outline" target="_blank">
-                <i class="fas fa-images"></i> View Portfolio (Pixabay)
-            </a>
-
-            <a href="https://www.instagram.com/dezigner_maxefex?igsh=MXgwbjZyb2Y1bWhobA==" class="btn btn-outline" style="border-color: #444; color: #ccc;" target="_blank">
-                <i class="fab fa-instagram"></i> @dezigner_maxefex
-            </a>
-
-            <a href="tel:+919961699196" class="btn btn-outline" style="border: none; color: #888; font-size: 0.9rem;">
-                <i class="fas fa-phone-alt"></i> +91 99616 99196
-            </a>
+    <div class="card-container">
+        
+        <div class="logo-box">
+            <div class="logo-text">MAX EFEX</div>
+            <p class="tagline">CREATIVE VISUAL SOLUTIONS</p>
         </div>
+
+        <div class="services-box">
+            <h3>Our Services</h3>
+            <div class="service-item"><i class="fas fa-check"></i> Ready to Print Files</div>
+            <div class="service-item"><i class="fas fa-check"></i> Website & Logo Design</div>
+            <div class="service-item"><i class="fas fa-check"></i> Branding & Identity</div>
+            <div class="service-item"><i class="fas fa-check"></i> Interior Designing</div>
+            <div class="service-item"><i class="fas fa-check"></i> Social Media Creatives</div>
+        </div>
+
+        <a href="https://wa.me/919961699196" class="btn btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+
+        <a href="#" class="btn btn-portfolio">
+            <i class="far fa-images"></i> View Portfolio (Pixabay)
+        </a>
+
+        <a href="https://instagram.com/dezigner_maxefex" class="btn btn-social">
+            <i class="fab fa-instagram"></i> @dezigner_maxefex
+        </a>
 
         <div class="footer">
-            <p>Based in Changanassery, Kerala</p>
-            <p style="margin-top: 5px;">
+            <div class="contact-row">
+                <i class="fas fa-phone-alt"></i> 
+                <a href="tel:+919961699196">+91 99616 99196</a>
+            </div>
+            <div class="contact-row">
+                <i class="fas fa-envelope"></i> 
                 <a href="mailto:mediamaxefex@gmail.com">mediamaxefex@gmail.com</a>
-            </p>
+            </div>
+            <div class="contact-row">
+                <i class="fas fa-envelope"></i> 
+                <a href="mailto:studiomaxefex@gmail.com">studiomaxefex@gmail.com</a>
+            </div>
+            
+            <p class="location">Based in Kottayam Changanassery, Kerala</p>
         </div>
+
     </div>
 
 </body>
