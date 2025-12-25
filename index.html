@@ -29,7 +29,7 @@
         .card-container {
             background: rgba(15, 15, 15, 0.95);
             width: 100%;
-            max-width: 400px;
+            max-width: 420px; /* Slightly wider to fit logo+text */
             border-radius: 25px;
             padding: 40px 30px;
             /* Orange/Red Glow shadow */
@@ -51,20 +51,25 @@
             background: linear-gradient(90deg, #ff6600, #d32f2f);
         }
 
-        /* --- LOGO AREA --- */
+        /* --- LOGO HEADER AREA --- */
         .logo-box {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             display: flex;
-            flex-direction: column;
+            flex-direction: row; /* Aligns items side-by-side */
             align-items: center;
+            justify-content: center;
+            gap: 15px; /* Space between Logo and Text */
         }
 
         /* LOGO IMAGE STYLING */
         .logo-img {
-            width: 80px;  /* Adjust size if needed */
+            width: 70px;  
             height: auto;
-            margin-bottom: 15px;
             display: block;
+        }
+
+        .header-text {
+            text-align: left; /* Aligns text to the left relative to the logo */
         }
 
         .company-name {
@@ -74,14 +79,15 @@
             letter-spacing: -0.5px;
             color: #ff6600; 
             line-height: 1;
-            margin-bottom: 5px;
+            margin-bottom: 2px;
         }
 
         .tagline {
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             color: #aaa;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
             font-weight: 500;
+            text-transform: uppercase;
         }
 
         /* --- SERVICES LIST --- */
@@ -224,8 +230,10 @@
         <div class="logo-box">
             <img src="images/image_3.png" alt="ME Logo" class="logo-img">
             
-            <div class="company-name">MAX EFEX</div>
-            <p class="tagline">CREATIVE VISUAL SOLUTIONS</p>
+            <div class="header-text">
+                <div class="company-name">MAX EFEX</div>
+                <div class="tagline">CREATIVE VISUAL SOLUTIONS</div>
+            </div>
         </div>
 
         <div class="services-box">
@@ -241,8 +249,8 @@
             <i class="fab fa-whatsapp"></i> Chat on WhatsApp
         </a>
 
-        <a href="#" class="btn btn-portfolio">
-            <i class="far fa-images"></i>https://pixabay.com/users/maxefex-5447583/View Portfolio (Pixabay)
+        <a href="https://pixabay.com/users/maxefex-5447583/" class="btn btn-portfolio">
+            <i class="far fa-images"></i> View Portfolio (Pixabay)
         </a>
 
         <a href="https://instagram.com/dezigner_maxefex" class="btn btn-social">
@@ -271,5 +279,4 @@
     </div>
 
 </body>
-
 </html>
