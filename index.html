@@ -3,189 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAX EFEX | Animation Engineer & Global Specialist</title>
+    <title>MAX EFEX | Animation Engineer & Visual Strategist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --p-orange: #ff6600;
-            --p-red: #d32f2f;
-            --bg-dark: #050505;
-            --card-bg: #111111;
+            --accent: #ff6600;
+            --deep-red: #d32f2f;
+            --bg: #050505;
+            --card-bg: #0c0c0c;
+            --text: #e0e0e0;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', 'Segoe UI', sans-serif; scroll-behavior: smooth; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
 
-        body { background-color: var(--bg-dark); color: #fff; }
-
-        /* --- NAVIGATION --- */
+        /* NAVIGATION */
         nav {
-            background: rgba(0,0,0,0.9);
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #222;
+            background: rgba(5, 5, 5, 0.98); padding: 20px 8%; display: flex;
+            justify-content: space-between; align-items: center; position: fixed;
+            width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid #1a1a1a;
         }
-        .nav-links a { color: #aaa; text-decoration: none; margin-left: 25px; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
-        .nav-links a:hover { color: var(--p-orange); }
+        .nav-links a { color: #888; text-decoration: none; margin-left: 30px; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
 
-        /* --- HERO SECTION (PAGE 1) --- */
-        .section { padding: 100px 10%; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
-        
+        /* SECTIONS */
+        .page { padding: 120px 10% 80px; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
         .hero { text-align: center; }
-        .logo-img { width: 140px; margin-bottom: 20px; }
-        .company-name { font-size: 3.5rem; color: var(--p-orange); font-weight: 800; text-transform: uppercase; }
-        .hero-title { font-size: 1.2rem; color: #888; letter-spacing: 4px; margin-bottom: 30px; }
-        .exp-badge { background: var(--p-red); padding: 8px 20px; border-radius: 50px; font-weight: 700; font-size: 0.8rem; }
+        
+        /* LOGO & NAME SPACING FIXED */
+        .logo-main { width: 170px; margin-bottom: 15px; filter: drop-shadow(0 0 15px rgba(255,102,0,0.15)); }
+        .company-name { font-size: 4.5rem; color: var(--accent); font-weight: 900; letter-spacing: -2px; text-transform: uppercase; line-height: 1; }
+        .title-sub { font-size: 1.1rem; color: #666; letter-spacing: 4px; margin-bottom: 30px; text-transform: uppercase; margin-top: 10px; }
+        .legacy-badge { display: inline-block; padding: 10px 25px; background: linear-gradient(90deg, var(--accent), var(--deep-red)); border-radius: 4px; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; color: #fff; }
 
-        /* --- CONTACT BUTTONS (ALL LINKS) --- */
-        .btn-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 40px; }
-        .btn { padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: 700; transition: 0.3s; display: flex; align-items: center; gap: 10px; }
-        .btn-wa { background: #25D366; color: white; }
-        .btn-insta { background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: white; }
-        .btn-pix { border: 2px solid var(--p-orange); color: var(--p-orange); }
-        .btn-mail { background: #444; color: white; }
+        /* BUTTONS */
+        .btn-stack { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 40px; }
+        .btn { padding: 14px 28px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 10px; transition: 0.3s; border: 1px solid transparent; }
+        .btn-wa { background: #128C7E; color: white; }
+        .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #bc1888); color: white; }
+        .btn-yt { background: #FF0000; color: white; }
+        .btn-fb { background: #1877F2; color: white; }
+        .btn-sec { border-color: var(--accent); color: var(--accent); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
 
-        /* --- SEARCH ENGINE --- */
-        .search-box { background: var(--card-bg); padding: 30px; border-radius: 20px; margin: 40px 0; border: 1px solid #222; }
-        .search-box h3 { color: var(--p-orange); margin-bottom: 15px; font-size: 1rem; }
+        /* CONTENT TABLES */
+        .content-box { margin-top: 60px; background: var(--card-bg); padding: 40px; border-radius: 15px; border: 1px solid #1a1a1a; }
+        .section-h { font-size: 1.8rem; color: var(--accent); margin-bottom: 25px; text-align: center; text-transform: uppercase; }
+        
+        .global-table { width: 100%; border-collapse: collapse; margin-bottom: 30px; font-size: 0.9rem; }
+        .global-table th, .global-table td { padding: 18px; text-align: left; border-bottom: 1px solid #222; }
+        .global-table th { color: #555; text-transform: uppercase; letter-spacing: 1px; font-size: 0.75rem; }
+        .highlight { color: #4caf50; font-weight: 700; }
+        .warning { color: var(--deep-red); font-weight: 700; }
 
-        /* --- SERVICES (PAGE 2) --- */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px; }
-        .s-card { background: var(--card-bg); padding: 35px; border-radius: 20px; border: 1px solid #222; transition: 0.3s; }
-        .s-card:hover { border-color: var(--p-orange); transform: translateY(-10px); }
-        .s-card i { font-size: 2.5rem; color: var(--p-red); margin-bottom: 20px; }
-        .s-card h4 { font-size: 1.4rem; color: var(--p-orange); margin-bottom: 15px; }
+        /* DOMAIN STRATEGY */
+        .domain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+        .domain-card { background: #080808; padding: 25px; border-radius: 10px; border-left: 4px solid var(--accent); }
+        .domain-card h5 { color: var(--accent); margin-bottom: 10px; font-size: 1.1rem; }
 
-        /* --- THE TRUTH / WHY ME (PAGE 3) --- */
-        .edu-section { background: #0a0a0a; padding: 40px; border-radius: 20px; margin-top: 40px; }
-        .comparison-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        .comparison-table th, .comparison-table td { padding: 15px; text-align: left; border-bottom: 1px solid #222; font-size: 0.9rem; }
-        .check { color: #4caf50; font-weight: bold; }
-        .fail { color: #f44336; font-weight: bold; }
+        footer { text-align: center; padding: 60px; border-top: 1px solid #111; font-size: 0.8rem; color: #444; }
 
-        /* AI IMAGE PLACEHOLDER */
-        .ai-gallery { width: 100%; height: 350px; background: #111; border-radius: 20px; margin-top: 30px; border: 1px dashed #444; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-
-        footer { text-align: center; padding: 50px; border-top: 1px solid #222; color: #444; }
-
-        @media (max-width: 768px) { .company-name { font-size: 2.2rem; } }
+        @media (max-width: 768px) {
+            .company-name { font-size: 2.8rem; }
+            .global-table { font-size: 0.8rem; }
+            .global-table th, .global-table td { padding: 10px; }
+        }
     </style>
 </head>
 <body>
 
 <nav>
-    <div class="nav-logo" style="color:var(--p-orange); font-weight:900;">MAX EFEX</div>
+    <div style="font-weight:900; font-size: 1.3rem; color:var(--accent);">MAX EFEX</div>
     <div class="nav-links">
-        <a href="#home">HOME</a>
-        <a href="#services">SERVICES</a>
-        <a href="#why-me">WHY CHOOSE US</a>
+        <a href="#home">IDENTITY</a>
+        <a href="#bundle">BUNDLE</a>
+        <a href="#solutions">SOLUTIONS</a>
+        <a href="#technical">TECHNICAL</a>
     </div>
 </nav>
 
-<section id="home" class="section">
+<section id="home" class="page">
     <div class="hero">
-        <img src="images/image_3.png" alt="Logo" class="logo-img">
+        <img src="images/image_3.png" alt="Logo" class="logo-main">
         <h1 class="company-name">MAX EFEX</h1>
-        <p class="hero-title">Animation Engineer | Visual Solutions Specialist</p>
-        <span class="exp-badge">25 YEARS OF EXCELLENCE</span>
+        <p class="title-sub">Animation Engineer & Visual Strategy Specialist</p>
+        <span class="legacy-badge">25 YEARS OF EXCELLENCE</span>
     </div>
 
-    <div class="btn-container">
-        <a href="https://wa.me/919961699196" class="btn btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <div class="btn-stack">
+        <a href="https://wa.me/919961699196" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Whatsapp</a>
         <a href="https://instagram.com/dezigner_maxefex" class="btn btn-insta"><i class="fab fa-instagram"></i> Instagram</a>
-        <a href="#" class="btn btn-pix"><i class="far fa-images"></i> Pixabay Portfolio</a>
-        <a href="mailto:mediamaxefex@gmail.com" class="btn btn-mail"><i class="fas fa-envelope"></i> Email Us</a>
-    </div>
-
-    <div class="search-box">
-        <h3><i class="fab fa-google"></i> Search the Web</h3>
-        <script async src="https://cse.google.com/cse.js?cx=YOUR_ENGINE_ID"></script>
-        <div class="gcse-search"></div>
+        <a href="#" class="btn btn-yt"><i class="fab fa-youtube"></i> Youtube</a>
+        <a href="#" class="btn btn-fb"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="mailto:mediamaxefex@gmail.com" class="btn btn-mail" style="background:#222; border:1px solid #333; color:white;"><i class="fas fa-envelope"></i> Email</a>
     </div>
 </section>
 
-<section id="services" class="section" style="background: #000;">
-    <h2 style="color: var(--p-orange); text-align: center;">Global Services</h2>
-    <p style="text-align: center; color: #666; margin-bottom: 40px;">Serving Kerala, India, and International Clients</p>
-
-    <div class="services-grid">
-        <div class="s-card">
-            <i class="fas fa-pen-nib"></i>
-            <h4>Premium Logo Design</h4>
-            <p>25 years of engineering brands that scale from business cards to massive outdoor flex boards.</p>
-        </div>
-        <div class="s-card">
-            <i class="fas fa-code"></i>
-            <h4>Custom HTML Web</h4>
-            <p>Fast, secure, and custom-coded websites. We don't use slow plugins. We build for performance.</p>
-        </div>
-        <div class="s-card">
-            <i class="fas fa-qrcode"></i>
-            <h4>Smart QR Branding</h4>
-            <p>Integrated QR codes on premium business cards. One scan connects your physical brand to your digital office.</p>
-        </div>
-    </div>
-
-    <div class="ai-gallery">
-        <p style="color:#333;">[AI Generated Design Showcase Area]</p>
+<section id="bundle" class="page" style="background: #000;">
+    <h2 class="section-h">One-Stop Digital Solution</h2>
+    <div class="content-box">
+        <table class="global-table">
+            <thead>
+                <tr>
+                    <th>Component</th>
+                    <th>What it Includes</th>
+                    <th>The "Premium" Factor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Premium Logo</b></td>
+                    <td>Custom icon, typography, color palette</td>
+                    <td class="highlight">A brand story for signage, uniforms, and web</td>
+                </tr>
+                <tr>
+                    <td><b>Pro Website</b></td>
+                    <td>Responsive, SEO Optimized, WhatsApp</td>
+                    <td class="highlight">Digital office working 24/7 for customers</td>
+                </tr>
+                <tr>
+                    <td><b>Smart Cards</b></td>
+                    <td>High-quality print with QR codes</td>
+                    <td class="highlight">Physical tool connecting instantly to digital</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </section>
 
-<section id="why-me" class="section">
-    <h2 style="color: var(--p-orange); text-align: center;">Why Choose Max Efex?</h2>
+<section id="solutions" class="page">
+    <h2 class="section-h">Industry Specific Packages</h2>
+    <div class="content-box">
+        <table class="global-table">
+            <thead>
+                <tr>
+                    <th>Client Type</th>
+                    <th>QR Function</th>
+                    <th>The Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Hotels</b></td>
+                    <td>QR to Digital Menu</td>
+                    <td>Instant price updates; no paper menu costs</td>
+                </tr>
+                <tr>
+                    <td><b>Clinics</b></td>
+                    <td>QR to WhatsApp/Booking</td>
+                    <td>Patients save contact and book instantly</td>
+                </tr>
+                <tr>
+                    <td><b>Shops</b></td>
+                    <td>QR to Google Maps/Reviews</td>
+                    <td>Boosts local ranking and customer navigation</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section id="technical" class="page" style="background: #000;">
+    <h2 class="section-h">Technical Superiority</h2>
     
-    <div class="edu-section">
-        <p>Expertise matters. In a market full of "cheap" offers, we provide stability and security for your business.</p>
-        
-        <table class="comparison-table">
-            <tr>
-                <th>Feature</th>
-                <th>Our Custom Development</th>
-                <th>Cheap WordPress/Sub-domains</th>
-            </tr>
-            <tr>
-                <td>Security</td>
-                <td class="check">✔ High (No Database)</td>
-                <td class="fail">✘ Low (Plugin Hacks)</td>
-            </tr>
-            <tr>
-                <td>Speed</td>
-                <td class="check">✔ Instant Load</td>
-                <td class="fail">✘ Slow Loading</td>
-            </tr>
-            <tr>
-                <td>Domain Trust</td>
-                <td class="check">✔ .com / .in Authority</td>
-                <td class="fail">✘ "Fake" Sub-domains</td>
-            </tr>
-            <tr>
-                <td>Global SEO</td>
-                <td class="check">✔ Built-in</td>
-                <td class="fail">✘ Paid Extras</td>
-            </tr>
+    <div class="content-box">
+        <h4 style="margin-bottom:20px; color:#888;">Engineering vs. Templates</h4>
+        <table class="global-table">
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Max Efex (Custom Code)</th>
+                    <th>Generic WordPress</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Speed</td>
+                    <td class="highlight">Blazing Fast / Instant Load</td>
+                    <td class="warning">Slow (Heavy Plugins/Themes)</td>
+                </tr>
+                <tr>
+                    <td>Security</td>
+                    <td class="highlight">No Database / Unhackable</td>
+                    <td class="warning">Vulnerable to Plugin Attacks</td>
+                </tr>
+                <tr>
+                    <td>Ownership</td>
+                    <td class="highlight">Clean code you own 100%</td>
+                    <td class="warning">Dependent on developers/updates</td>
+                </tr>
+                <tr>
+                    <td>Maintenance</td>
+                    <td class="highlight">Zero Maintenance Required</td>
+                    <td class="warning">Regular updates or site breaks</td>
+                </tr>
+            </tbody>
         </table>
     </div>
 
-    <div style="margin-top: 40px; background: var(--card-bg); padding: 30px; border-radius: 20px;">
-        <h4 style="color: var(--p-red);">25 Years of Experience</h4>
-        <p style="font-size: 0.9rem; color: #888; margin-top: 10px;">
-            Based in Kerala, serving the world. From Vinayaka Interiors to Hera's Glam, we have built digital identities for the finest brands. We understand the difference between a website and a global business tool.
-        </p>
+    <div class="content-box" style="margin-top:30px;">
+        <h4 style="margin-bottom:20px; color:#888;">The Domain Truth: Professional Identity</h4>
+        <p style="font-size:0.85rem; color:#666; margin-bottom:20px;">Avoid "Secondary" domains (like .blogspot or .wix) that look like a hobby. Invest in authority.</p>
+        <div class="domain-grid">
+            <div class="domain-card">
+                <h5>.in / .co.in</h5>
+                <p>The Indian Identity. Best for local SEO in markets like National and States.</p>
+            </div>
+            <div class="domain-card">
+                <h5>.com</h5>
+                <p>The Global Standard. Mandatory for international trust and exports.</p>
+            </div>
+        </div>
     </div>
+</section>
 
-    <div class="btn-container">
-        <a href="https://wa.me/919961699196" class="btn btn-wa">Start Your Project Now</a>
+<section id="establishment" class="page">
+    <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 40px;">
+        <img src="images/me.png" alt="Aneesh K Rajeev" style="width: 200px; height: 200px; border-radius: 50%; border: 3px solid var(--accent); object-fit: cover;">
+    </div>
+    <div style="text-align:center; max-width:800px; margin: 0 auto;">
+        <h2 style="color:var(--accent); font-size:2rem; margin-bottom:20px;">Global Design Engineering</h2>
+        <p style="color:#888;">Max Efex represents 25 years of refined expertise in Animation Engineering and Visual Strategy. Based in Kerala, we bridge the gap between local heritage and international design standards. From local clinics to global exporters, we engineer visual identities that endure.</p>
     </div>
 </section>
 
 <footer>
-    <p>&copy; 2026 MAX EFEX | Animation Engineer & Visual Solutions</p>
-    <p>Kerala | India | International</p>
+    <p>MAX EFEX | KERALA • INDIA • INTERNATIONAL</p>
+    <p style="margin-top:15px; color: #1a1a1a;">© 2026 PROPRIETARY DESIGN BY ME</p>
 </footer>
 
 </body>
