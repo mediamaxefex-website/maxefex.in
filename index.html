@@ -30,7 +30,7 @@
         .page { padding: 120px 10% 80px; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
         .hero { text-align: center; }
         
-        /* LOGO & NAME SPACING FIXED */
+        /* LOGO & NAME */
         .logo-main { width: 170px; margin-bottom: 15px; filter: drop-shadow(0 0 15px rgba(255,102,0,0.15)); }
         .company-name { font-size: 4.5rem; color: var(--accent); font-weight: 900; letter-spacing: -2px; text-transform: uppercase; line-height: 1; }
         .title-sub { font-size: 1.1rem; color: #666; letter-spacing: 4px; margin-bottom: 30px; text-transform: uppercase; margin-top: 10px; }
@@ -43,8 +43,47 @@
         .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #bc1888); color: white; }
         .btn-yt { background: #FF0000; color: white; }
         .btn-fb { background: #1877F2; color: white; }
+        .btn-pixabay { background: #232a34; color: white; border: 1px solid #444; }
         .btn-sec { border-color: var(--accent); color: var(--accent); }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+
+        /* NEW SERVICE GRID STYLING */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .service-card {
+            background: #0c0c0c;
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid #1a1a1a;
+            transition: 0.3s;
+            text-align: left;
+        }
+        .service-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+        .service-card i {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            display: block;
+        }
+        .service-card h4 {
+            color: #fff;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .service-card p {
+            font-size: 0.9rem;
+            color: #888;
+            line-height: 1.6;
+        }
+        .service-card b { color: var(--accent); }
 
         /* CONTENT TABLES */
         .content-box { margin-top: 60px; background: var(--card-bg); padding: 40px; border-radius: 15px; border: 1px solid #1a1a1a; }
@@ -76,8 +115,8 @@
     <div style="font-weight:900; font-size: 1.3rem; color:var(--accent);">MAX EFEX</div>
     <div class="nav-links">
         <a href="#home">IDENTITY</a>
-        <a href="#bundle">BUNDLE</a>
-        <a href="#solutions">SOLUTIONS</a>
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICES</a>
         <a href="#technical">TECHNICAL</a>
     </div>
 </nav>
@@ -93,9 +132,95 @@
     <div class="btn-stack">
         <a href="https://wa.me/919961699196" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Whatsapp</a>
         <a href="https://instagram.com/dezigner_maxefex" class="btn btn-insta"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#" class="btn btn-pixabay"><i class="fas fa-camera"></i> Pixabay</a>
         <a href="#" class="btn btn-yt"><i class="fab fa-youtube"></i> Youtube</a>
         <a href="#" class="btn btn-fb"><i class="fab fa-facebook-f"></i> Facebook</a>
         <a href="mailto:mediamaxefex@gmail.com" class="btn btn-mail" style="background:#222; border:1px solid #333; color:white;"><i class="fas fa-envelope"></i> Email</a>
+    </div>
+</section>
+
+<section id="about" class="page" style="background:#000;">
+    <h2 class="section-h">Global Design Engineering</h2>
+  
+    <div class="content-box" style="max-width:900px; margin:0 auto; text-align:center;">
+      <h3 style="color:var(--accent); margin-bottom:20px; letter-spacing:2px;">
+        Established Excellence Since 1999
+      </h3>
+  
+      <p style="color:#888; font-size:0.95rem; margin-bottom:25px;">
+        Max Efex is not just a design studio — it is a <b>creative engineering brand built on 15 years of visual mastery, technical precision, and strategic thinking.</b>
+        Founded in Kerala, India, we bridge local business heritage with international design standards, delivering branding systems and digital solutions that perform in the real world — not just on screens.
+      </p>
+  
+      <p style="color:#777; font-size:0.9rem; margin-bottom:25px;">
+        Our work spans clinics, hotels, retail brands, exporters, entrepreneurs, and global-facing companies. We engineer visual identities that build trust, authority, and long-term recognition across print, digital, motion, and physical branding platforms.
+      </p>
+  
+      <p style="color:#999; font-weight:600; letter-spacing:1px; text-transform: uppercase; font-size: 0.8rem;">
+        We don’t follow trends. We engineer visual systems that endure.
+      </p>
+    </div>
+</section>
+
+<section id="services" class="page">
+    <h2 class="section-h">Professional Services</h2>
+    <div class="service-grid">
+
+        <div class="service-card">
+          <i class="fas fa-pen-nib"></i>
+          <h4>Brand Identity Engineering</h4>
+          <p>
+            We design complete visual systems — logos, typography, color architecture, and brand standards.
+            Your identity is engineered to perform consistently across signage, print, and global platforms.
+            <br><br><b>Result:</b> A brand that looks professional everywhere.
+          </p>
+        </div>
+      
+        <div class="service-card">
+          <i class="fas fa-laptop-code"></i>
+          <h4>Custom Website Engineering</h4>
+          <p>
+            High-speed, secure, SEO-optimized websites built using clean custom code — not fragile templates.
+            Designed for full ownership and zero maintenance dependency.
+            <br><br><b>Result:</b> A digital office that works 24/7 for you.
+          </p>
+        </div>
+      
+        <div class="service-card">
+          <i class="fas fa-qrcode"></i>
+          <h4>QR & Smart Solutions</h4>
+          <p>
+            Intelligent QR systems for digital menus, smart visiting cards, WhatsApp booking, and Google Maps lead generation.
+            <br><br><b>Result:</b> Faster customer action and higher visibility.
+          </p>
+        </div>
+      
+        <div class="service-card">
+          <i class="fas fa-video"></i>
+          <h4>Motion & Animation</h4>
+          <p>
+            Cinematic brand intros, social reels, promotional videos, and business explainers engineered for maximum engagement and recall.
+            <br><br><b>Result:</b> Premium perception and brand presence.
+          </p>
+        </div>
+      
+        <div class="service-card">
+          <i class="fas fa-robot"></i>
+          <h4>AI-Powered Visuals</h4>
+          <p>
+            AI-enhanced product shots, marketing scenes, and posters guided by professional design strategy.
+            <br><br><b>Result:</b> High-end visuals without traditional production costs.
+          </p>
+        </div>
+      
+        <div class="service-card">
+          <i class="fas fa-print"></i>
+          <h4>Print & Signage</h4>
+          <p>
+            Visiting cards, brochures, and backlit signage optimized for color accuracy and material performance.
+            <br><br><b>Result:</b> Your brand dominates in the real world.
+          </p>
+        </div>
     </div>
 </section>
 
@@ -118,7 +243,7 @@
                 </tr>
                 <tr>
                     <td><b>Pro Website</b></td>
-                    <td>Responsive, SEO Optimized, Social Media Links and Map Location</td>
+                    <td>Responsive, SEO Optimized, WhatsApp</td>
                     <td class="highlight">Digital office working 24/7 for customers</td>
                 </tr>
                 <tr>
@@ -131,35 +256,22 @@
     </div>
 </section>
 
-<section id="solutions" class="page">
-    <h2 class="section-h">Industry Specific Packages</h2>
-    <div class="content-box">
-        <table class="global-table">
-            <thead>
-                <tr>
-                    <th>Client Type</th>
-                    <th>QR Function</th>
-                    <th>The Result</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><b>Hotels</b></td>
-                    <td>QR to Digital Menu</td>
-                    <td>Instant price updates; no paper menu costs</td>
-                </tr>
-                <tr>
-                    <td><b>Clinics</b></td>
-                    <td>QR to WhatsApp/Booking</td>
-                    <td>Patients save contact and book instantly</td>
-                </tr>
-                <tr>
-                    <td><b>Shops</b></td>
-                    <td>QR to Google Maps/Reviews</td>
-                    <td>Boosts local ranking and customer navigation</td>
-                </tr>
-            </tbody>
-        </table>
+<section id="philosophy" class="page">
+    <h2 class="section-h">Design Philosophy</h2>
+  
+    <div class="content-box" style="max-width:800px; margin:0 auto; text-align:center;">
+      <h3 style="color:var(--accent); margin-bottom:20px;">
+        Design is Not Decoration. It is Strategy.
+      </h3>
+  
+      <p style="color:#888; font-size:0.95rem; margin-bottom:20px;">
+        At Max Efex, every line, color, and motion is created with purpose, performance, and perception in mind.
+        We believe great design should build trust instantly and remain timeless across platforms.
+      </p>
+  
+      <p style="color:#999; font-weight:600; text-transform: uppercase; letter-spacing: 1px;">
+        That is why we call our work <b>Visual Engineering — not graphic design.</b>
+      </p>
     </div>
 </section>
 
@@ -192,28 +304,8 @@
                     <td class="highlight">Clean code you own 100%</td>
                     <td class="warning">Dependent on developers/updates</td>
                 </tr>
-                <tr>
-                    <td>Maintenance</td>
-                    <td class="highlight">Zero Maintenance Required</td>
-                    <td class="warning">Regular updates or site breaks</td>
-                </tr>
             </tbody>
         </table>
-    </div>
-
-    <div class="content-box" style="margin-top:30px;">
-        <h4 style="margin-bottom:20px; color:#888;">The Domain Truth: Professional Identity</h4>
-        <p style="font-size:0.85rem; color:#666; margin-bottom:20px;">Avoid "Secondary" domains (like .blogspot or .wix) that look like a hobby. Invest in authority.</p>
-        <div class="domain-grid">
-            <div class="domain-card">
-                <h5>.in / .co.in</h5>
-                <p>The Indian Identity. Best for local SEO in markets like National and States.</p>
-            </div>
-            <div class="domain-card">
-                <h5>.com</h5>
-                <p>The Global Standard. Mandatory for international trust and exports.</p>
-            </div>
-        </div>
     </div>
 </section>
 
@@ -222,17 +314,16 @@
         <img src="images/me.png" alt="Aneesh K Rajeev" style="width: 200px; height: 200px; border-radius: 50%; border: 3px solid var(--accent); object-fit: cover;">
     </div>
     <div style="text-align:center; max-width:800px; margin: 0 auto;">
-        <h2 style="color:var(--accent); font-size:2rem; margin-bottom:20px;">Global Design Engineering</h2>
-        <p style="color:#888;">Max Efex represents 15 years of refined expertise in Animation Engineering and Visual Strategy. Based in Kerala, we bridge the gap between local heritage and international design standards. From local clinics to global exporters, we engineer visual identities that endure.</p>
+        <h2 style="color:var(--accent); font-size:2rem; margin-bottom:10px;">MAX EFEX</h2>
+        <p style="color:#666; letter-spacing: 2px; margin-bottom: 20px; font-weight: bold;">+919961699169</p>
+        <p style="color:#888;">Max Efex represents 15 years of refined expertise in Animation Engineering and Visual Strategy. Based in Kerala, we bridge the gap between local heritage and international design standards.</p>
     </div>
 </section>
 
 <footer>
-    <p>MAX EFEX | KERALA • INDIA • INTERNATIONAL</p>
+    <p>MAX EFEX 2K26 | INDIA • INTERNATIONAL</p>
     <p style="margin-top:15px; color: #1a1a1a;">© 2026 PROPRIETARY DESIGN BY ME</p>
 </footer>
 
 </body>
 </html>
-
-
