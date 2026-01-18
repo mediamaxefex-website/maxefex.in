@@ -6,92 +6,83 @@
     <title>MAX EFEX | Animation Engineer & Visual Strategist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --accent: #ff6600;
-            --deep-red: #d32f2f;
-            --bg: #050505;
-            --card-bg: #0c0c0c;
-            --text: #e0e0e0;
-        }
+    :root {
+        --accent: #ff6600;
+        --deep-red: #d32f2f;
+        --bg: #050505;
+        --card-bg: #0c0c0c;
+        --text: #e0e0e0;
+    }
 
-        /* RESET & GLOBAL */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', 'Segoe UI', sans-serif; scroll-behavior: smooth; }
-        body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
+    /* GLOBAL RESET - Removes that "Empty Left Space" */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', 'Segoe UI', sans-serif; scroll-behavior: smooth; }
+    body { background-color: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
 
-        /* NAVIGATION - From maxefex.html */
-        nav {
-            background: rgba(5, 5, 5, 0.98); padding: 15px 8%; display: flex;
-            justify-content: space-between; align-items: center; position: fixed;
-            width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid #1a1a1a;
-        }
-        .nav-links a { color: #888; text-decoration: none; margin-left: 25px; font-weight: 600; font-size: 0.8rem; letter-spacing: 1px; transition: 0.3s; }
-        .nav-links a:hover { color: var(--accent); }
+    /* NAVIGATION */
+    nav {
+        background: rgba(5, 5, 5, 0.98); padding: 15px 8%; display: flex;
+        justify-content: space-between; align-items: center; position: fixed;
+        width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid #1a1a1a;
+    }
 
-        /* SECTIONS */
-        .page { padding: 120px 10% 60px; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
-        .hero { text-align: center; }
+    /* HERO & IDENTITY */
+    .page { padding: 120px 8% 60px; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+    .logo-main { width: 100px; margin-bottom: 10px; filter: drop-shadow(0 0 15px rgba(255,102,0,0.3)); }
+    .company-name { font-size: 3.5rem; color: var(--accent); font-weight: 900; letter-spacing: -2px; text-transform: uppercase; line-height: 1; }
+    .title-sub { font-size: 0.95rem; color: #666; letter-spacing: 3px; margin-bottom: 25px; text-transform: uppercase; margin-top: 10px; }
+    
+    /* THE LENGHTENED BUTTON STACK */
+    .btn-stack { 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 12px; 
+        width: 100%; 
+        max-width: 550px; /* This controls the total button length */
+        margin: 0 auto;  /* Perfectly centers the buttons */
+    }
+
+    .group-label { color: #444; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin: 20px 0 8px; }
+
+    .btn { 
+        width: 100%; /* Forces all buttons to the same long length */
+        height: 52px; 
+        border-radius: 5px; 
+        text-decoration: none; 
+        font-weight: 700; 
+        font-size: 0.9rem; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        gap: 15px; 
+        transition: 0.3s; 
+        color: white;
+        padding: 0 25px;
         
-        /* LOGO & BRANDING - From maxefex.html */
-        .logo-main { width: 100px; margin-bottom: 10px; filter: drop-shadow(0 0 15px rgba(255,102,0,0.3)); }
-        .company-name { font-size: 3.5rem; color: var(--accent); font-weight: 900; letter-spacing: -2px; text-transform: uppercase; line-height: 1; }
-        .title-sub { font-size: 0.95rem; color: #666; letter-spacing: 3px; margin-bottom: 25px; text-transform: uppercase; margin-top: 10px; }
-        .legacy-badge { 
-            display: inline-block; padding: 8px 25px; 
-            background: linear-gradient(90deg, #ffcc00, #ff6600, #d32f2f); 
-            border-radius: 4px; font-weight: 800; font-size: 0.8rem; letter-spacing: 1px; color: #fff; margin-bottom: 30px; 
-        }
+        /* OVERFLOW PROTECTION - Keeps letters inside */
+        white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+    }
 
-        /* BUTTONS - Organized from maxefex.html */
-        .btn-stack { display: grid; grid-template-columns: 1fr; gap: 12px; max-width: 420px; margin: 0 auto; }
-        .group-label {
-            color: #444; font-size: 0.7rem; font-weight: 800; text-transform: uppercase;
-            letter-spacing: 2px; margin: 25px 0 10px; text-align: center;
-        }
-        .btn { 
-            height: 52px; border-radius: 5px; text-decoration: none; font-weight: 700; 
-            font-size: 0.85rem; display: flex; align-items: center; justify-content: center; 
-            gap: 12px; transition: 0.3s; color: white; width: 100%;
-        }
+    /* COLORS */
+    .btn-call { background: #ff6600; }
+    .btn-wa { background: #128C7E; }
+    .btn-mail { background: #1a1a1a; border: 1px solid #222; color: #aaa; }
+    .btn-pixabay { background: #232a34; border: 1px solid #333; }
+    .btn-yt { background: #c4302b; }
+    .btn-fb { background: #3b5998; }
+    .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #bc1888); }
 
-        /* BUTTON THEMES */
-        .btn-call { background: #ff6600; }
-        .btn-wa { background: #128C7E; }
-        .btn-mail { background: #1a1a1a; border: 1px solid #222; color: #aaa; }
-        .btn-pixabay { background: #232a34; border: 1px solid #333; }
-        .btn-yt { background: #c4302b; }
-        .btn-fb { background: #3b5998; }
-        .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #bc1888); }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.5); filter: brightness(1.2); }
 
-        .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.5); filter: brightness(1.2); color: #fff; }
-
-        /* CONTENT AREAS - From index.html */
-        .section-h { font-size: 1.8rem; color: var(--accent); margin-bottom: 25px; text-align: center; text-transform: uppercase; }
-        .content-box { margin-top: 40px; background: var(--card-bg); padding: 40px; border-radius: 15px; border: 1px solid #1a1a1a; }
-        
-        /* SERVICES GRID */
-        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 40px; }
-        .service-card { background: #0c0c0c; padding: 35px; border-radius: 12px; border: 1px solid #1a1a1a; transition: 0.3s; text-align: left; }
-        .service-card:hover { border-color: var(--accent); transform: translateY(-5px); }
-        .service-card i { font-size: 1.8rem; color: var(--accent); margin-bottom: 20px; display: block; }
-        .service-card h4 { color: #fff; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
-        .service-card p { font-size: 0.9rem; color: #888; line-height: 1.6; }
-        .service-card b { color: var(--accent); }
-
-        /* TABLES */
-        .global-table { width: 100%; border-collapse: collapse; margin-bottom: 30px; font-size: 0.9rem; }
-        .global-table th, .global-table td { padding: 18px; text-align: left; border-bottom: 1px solid #222; }
-        .global-table th { color: #555; text-transform: uppercase; letter-spacing: 1px; font-size: 0.75rem; }
-        .highlight { color: #4caf50; font-weight: 700; }
-        .warning { color: var(--deep-red); font-weight: 700; }
-
-        footer { text-align: center; padding: 60px 20px; border-top: 1px solid #111; font-size: 0.8rem; color: #333; letter-spacing: 1px; }
-
-        @media (max-width: 768px) {
-            .company-name { font-size: 2.5rem; }
-            .btn-stack { max-width: 100%; }
-            .page { padding-top: 100px; }
-        }
-    </style>
+    /* MOBILE ADJUSTMENTS */
+    @media (max-width: 768px) {
+        .company-name { font-size: 2.5rem; }
+        .btn-stack { max-width: 90%; } /* Buttons stay wide but fit the phone */
+        .btn { font-size: 0.8rem; height: 48px; }
+    }
+</style>
 </head>
 <body>
 
