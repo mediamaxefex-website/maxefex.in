@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Complete Visual Architect & Strategy Group</title>
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 
@@ -27,9 +28,11 @@
         }
 
         body {
-            background-color: #050505; /* Fallback */
+            background-color: #050505;
+            /* Fallback */
             background-color: var(--bg);
-            color: #e0e0e0; /* Fallback */
+            color: #e0e0e0;
+            /* Fallback */
             color: var(--text);
             line-height: 1.6;
         }
@@ -59,7 +62,8 @@
         }
 
         .nav-links a:hover {
-            color: #ff6600; /* Fallback */
+            color: #ff6600;
+            /* Fallback */
             color: var(--accent);
         }
 
@@ -153,13 +157,36 @@
             overflow: hidden;
         }
 
-        .btn-call { background: #ff6600; }
-        .btn-wa { background: #128C7E; }
-        .btn-mail { background: #1a1a1a; border: 1px solid #222; color: #aaa; }
-        .btn-pixabay { background: #232a34; border: 1px solid #333; }
-        .btn-yt { background: #c4302b; }
-        .btn-fb { background: #3b5998; }
-        .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #bc1888); }
+        .btn-call {
+            background: #ff6600;
+        }
+
+        .btn-wa {
+            background: #128C7E;
+        }
+
+        .btn-mail {
+            background: #1a1a1a;
+            border: 1px solid #222;
+            color: #aaa;
+        }
+
+        .btn-pixabay {
+            background: #232a34;
+            border: 1px solid #333;
+        }
+
+        .btn-yt {
+            background: #c4302b;
+        }
+
+        .btn-fb {
+            background: #3b5998;
+        }
+
+        .btn-insta {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #bc1888);
+        }
 
         .btn:hover {
             transform: translateY(-2px);
@@ -179,7 +206,8 @@
 
         .content-box {
             margin-top: 40px;
-            background: #0c0c0c; /* Fallback */
+            background: #0c0c0c;
+            /* Fallback */
             background: var(--card-bg);
             padding: 40px;
             border-radius: 15px;
@@ -204,7 +232,8 @@
         }
 
         .service-card:hover {
-            border-color: #ff6600; /* Fallback */
+            border-color: #ff6600;
+            /* Fallback */
             border-color: var(--accent);
             transform: translateY(-5px);
         }
@@ -251,8 +280,15 @@
             font-size: 0.75rem;
         }
 
-        .highlight { color: #4caf50; font-weight: 700; }
-        .warning { color: #d32f2f; font-weight: 700; }
+        .highlight {
+            color: #4caf50;
+            font-weight: 700;
+        }
+
+        .warning {
+            color: #d32f2f;
+            font-weight: 700;
+        }
 
         footer {
             text-align: center;
@@ -264,9 +300,17 @@
         }
 
         @media (max-width: 768px) {
-            .company-name { font-size: 2.5rem; }
-            .btn-stack { max-width: 100%; }
-            .page { padding-top: 100px; }
+            .company-name {
+                font-size: 2.5rem;
+            }
+
+            .btn-stack {
+                max-width: 100%;
+            }
+
+            .page {
+                padding-top: 100px;
+            }
         }
     </style>
 </head>
@@ -278,7 +322,7 @@
         <div class="nav-links">
             <a href="#home">IDENTITY</a>
             <a href="#about">ABOUT</a>
-            <a href="#offers" style="color: var(--accent);">OFFERS</a> 
+            <a href="#offers" style="color: var(--accent);">OFFERS</a>
             <a href="#services">SERVICES</a>
             <a href="#technical">TECHNICAL</a>
         </div>
@@ -294,104 +338,307 @@
 
         <div class="btn-stack">
             <div class="group-label">Direct Contact</div>
-            <a href="tel:+919961699196" class="btn btn-call"><i class="fas fa-phone-alt"></i> Direct Call — +91 99616 99196</a>
-            <a href="https://wa.me/919961699196" class="btn btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp Instant Chat</a>
-            <a href="mailto:mediamaxefex@gmail.com" class="btn btn-mail"><i class="fas fa-envelope"></i> Email: mediamaxefex@gmail.com</a>
-            <a href="mailto:studiomaxefex@gmail.com" class="btn btn-mail"><i class="fas fa-envelope-open"></i> Email: studiomaxefex@gmail.com</a>
+            <a href="tel:+919961699196" class="btn btn-call"><i class="fas fa-phone-alt"></i> Direct Call — +91 99616
+                99196</a>
+            <a href="https://wa.me/919961699196" class="btn btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp Instant
+                Chat</a>
+            <a href="mailto:mediamaxefex@gmail.com" class="btn btn-mail"><i class="fas fa-envelope"></i> Email:
+                mediamaxefex@gmail.com</a>
+            <a href="mailto:studiomaxefex@gmail.com" class="btn btn-mail"><i class="fas fa-envelope-open"></i> Email:
+                studiomaxefex@gmail.com</a>
 
             <div class="group-label">Visual Portfolio</div>
-            <a href="https://pixabay.com/users/maxefex-5447583/" target="_blank" class="btn btn-pixabay"><i class="fas fa-camera"></i> High-Resolution Stock Gallery</a>
-            <a href="https://www.youtube.com/@mediamaxefex" target="_blank" class="btn btn-yt"><i class="fab fa-youtube"></i> Watch YouTube Channel</a>
-            <a href="https://www.facebook.com/MAXEFEX/" target="_blank" class="btn btn-fb"><i class="fab fa-facebook-f"></i> Follow on Facebook</a>
-            <a href="https://instagram.com/dezigner_maxefex" class="btn btn-insta"><i class="fab fa-instagram"></i> View Instagram Portfolio</a>
+            <a href="https://pixabay.com/users/maxefex-5447583/" target="_blank" class="btn btn-pixabay"><i
+                    class="fas fa-camera"></i> High-Resolution Stock Gallery</a>
+            <a href="https://www.youtube.com/@mediamaxefex" target="_blank" class="btn btn-yt"><i
+                    class="fab fa-youtube"></i> Watch YouTube Channel</a>
+            <a href="https://www.facebook.com/MAXEFEX/" target="_blank" class="btn btn-fb"><i
+                    class="fab fa-facebook-f"></i> Follow on Facebook</a>
+            <a href="https://instagram.com/dezigner_maxefex" class="btn btn-insta"><i class="fab fa-instagram"></i> View
+                Instagram Portfolio</a>
         </div>
     </section>
 
     <section id="about" class="page" style="background:#000;">
         <h2 class="section-h">Global Design Engineering</h2>
         <div class="content-box" style="max-width:900px; margin:0 auto; text-align:center;">
-          <h3 style="color:var(--accent); margin-bottom:20px; letter-spacing:2px;">Established Excellence Since 2011</h3>
-          <p style="color:#888; font-size:0.95rem; margin-bottom:25px;">
-            Max Efex is a <b>creative engineering brand built on 15 years of visual mastery, technical precision, and strategic thinking.</b> Founded in Kerala, India, we bridge local business heritage with international design standards.
-          </p>
-          <p style="color:#999; font-weight:600; letter-spacing:1px; text-transform: uppercase; font-size: 0.8rem;">
-            We don’t follow trends. We engineer visual systems that endure.
-          </p>
+            <h3 style="color:var(--accent); margin-bottom:20px; letter-spacing:2px;">Established Excellence Since 2011
+            </h3>
+            <p style="color:#888; font-size:0.95rem; margin-bottom:25px;">
+                Max Efex is a <b>creative engineering brand built on 15 years of visual mastery, technical precision,
+                    and strategic thinking.</b> Founded in Kerala, India, we bridge local business heritage with
+                international design standards.
+            </p>
+            <p style="color:#999; font-weight:600; letter-spacing:1px; text-transform: uppercase; font-size: 0.8rem;">
+                We don’t follow trends. We engineer visual systems that endure.
+            </p>
         </div>
     </section>
 
     <section id="offers" class="page" style="background: #050505;">
         <h2 class="section-h">Current Professional Offers</h2>
         <div class="content-box" style="border: 2px solid var(--accent); position: relative; overflow: hidden;">
-            <div style="background: var(--accent); color: #000; position: absolute; top: 20px; right: -35px; transform: rotate(45deg); padding: 5px 40px; font-weight: 900; font-size: 0.8rem;">BEST VALUE</div>
+            <div
+                style="background: var(--accent); color: #000; position: absolute; top: 20px; right: -35px; transform: rotate(45deg); padding: 5px 40px; font-weight: 900; font-size: 0.8rem;">
+                BEST VALUE</div>
             <div style="text-align: center; margin-bottom: 40px;">
                 <h3 style="font-size: 2.5rem; color: #fff; margin-bottom: 10px;">Full Identity Bundle</h3>
-                <div style="font-size: 3rem; font-weight: 900; color: var(--accent);">₹8,999 <span style="font-size: 1rem; color: #666; text-decoration: line-through;">₹15,000</span></div>
+                <div style="font-size: 3rem; font-weight: 900; color: var(--accent);">₹8,999 <span
+                        style="font-size: 1rem; color: #666; text-decoration: line-through;">₹15,000</span></div>
                 <p style="color: #888; letter-spacing: 1px;">EVERYTHING YOU NEED TO LAUNCH YOUR BRAND</p>
             </div>
 
             <div class="service-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-                <div class="service-card" style="background: #111;"><i class="fas fa-fingerprint"></i><h4>Premium Logo</h4><p>Architectural Vector files ready for CNC, signage, and digital use.</p></div>
-                <div class="service-card" style="background: #111;"><i class="fas fa-code"></i><h4>Pro HTML Website</h4><p>High-speed, hand-coded responsive site with SEO optimization.</p></div>
-                <div class="service-card" style="background: #111;"><i class="fas fa-address-card"></i><h4>Smart Business Cards</h4><p>1,000 Premium Printed Cards with Dynamic QR integration.</p></div>
+                <div class="service-card" style="background: #111;"><i class="fas fa-fingerprint"></i>
+                    <h4>Premium Logo</h4>
+                    <p>Architectural Vector files ready for CNC, signage, and digital use.</p>
+                </div>
+                <div class="service-card" style="background: #111;"><i class="fas fa-code"></i>
+                    <h4>Pro HTML Website</h4>
+                    <p>High-speed, hand-coded responsive site with SEO optimization.</p>
+                </div>
+                <div class="service-card" style="background: #111;"><i class="fas fa-address-card"></i>
+                    <h4>Smart Business Cards</h4>
+                    <p>1,000 Premium Printed Cards with Dynamic QR integration.</p>
+                </div>
             </div>
 
             <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid #222;">
                 <div class="service-grid">
-                    <div style="display: flex; gap: 15px; align-items: center;"><i class="fas fa-shield-halved" style="color: var(--accent); font-size: 1.5rem;"></i><div><h5 style="color: #fff;">24/7 MONITORING</h5><p style="font-size: 0.8rem; color: #666;">Continuous performance & uptime oversight.</p></div></div>
-                    <div style="display: flex; gap: 15px; align-items: center;"><i class="fas fa-sync" style="color: var(--accent); font-size: 1.5rem;"></i><div><h5 style="color: #fff;">3 FREE UPDATES YEARLY</h5><p style="font-size: 0.8rem; color: #666;">Professional content updates included.</p></div></div>
+                    <div style="display: flex; gap: 15px; align-items: center;"><i class="fas fa-shield-halved"
+                            style="color: var(--accent); font-size: 1.5rem;"></i>
+                        <div>
+                            <h5 style="color: #fff;">24/7 MONITORING</h5>
+                            <p style="font-size: 0.8rem; color: #666;">Continuous performance & uptime oversight.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 15px; align-items: center;"><i class="fas fa-sync"
+                            style="color: var(--accent); font-size: 1.5rem;"></i>
+                        <div>
+                            <h5 style="color: #fff;">3 FREE UPDATES YEARLY</h5>
+                            <p style="font-size: 0.8rem; color: #666;">Professional content updates included.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div style="text-align: center; margin-top: 40px;">
-                <a href="https://wa.me/919961699196?text=I%20am%20interested%20in%20the%208999%20Offer" class="btn btn-wa" style="max-width: 300px; margin: 0 auto;">CLAIM THIS OFFER NOW</a>
+                <a href="https://wa.me/919961699196?text=I%20am%20interested%20in%20the%208999%20Offer"
+                    class="btn btn-wa" style="max-width: 300px; margin: 0 auto;">CLAIM THIS OFFER NOW</a>
             </div>
         </div>
     </section>
-
+    <!-- SERVICES SECTION START -->
     <section id="services" class="page">
-        <h2 class="section-h">Professional Services</h2>
+
+        <h2 class="section-h">PROFESSIONAL SERVICES</h2>
+
         <div class="service-grid">
-            <div class="service-card"><i class="fas fa-gem"></i><h4>Architectural Brand Engineering</h4><p>We engineer high-end identities ready for industrial signage and CNC cutting. Universal scalability from favicons to facades.</p></div>
-            <div class="service-card"><i class="fas fa-bolt"></i><h4>Elite Responsive Website Engineering</h4><p>Hand-coded HTML websites for extreme performance. No slow themes, just 100% owner control and blazing speed.</p></div>
-            <div class="service-card"><i class="fas fa-qrcode"></i><h4>Precision QR Codes & Smart Engineering</h4><p>High-speed static and dynamic QR systems to bridge your physical and digital presence instantly.</p></div>
-            <div class="service-card"><i class="fas fa-microchip"></i><h4>AI-Driven Visual Architecture</h4><p>Copyright-protected hyper-realistic AI models optimized specifically for your brand identity.</p></div>
-            <div class="service-card"><i class="fas fa-print"></i><h4>Print & Production Engineering</h4><p>Ready-to-print industrial files (CDR, AI, PDF) with precise CMYK color profiling for professional signage.</p></div>
+
+            <div class="service-card">
+                <i class="fas fa-gem"></i>
+                <h4>ARCHITECTURAL BRAND ENGINEERING</h4>
+                <p>High-end brand identities ready for signage, CNC cutting and production.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-bolt"></i>
+                <h4>ELITE RESPONSIVE WEBSITE ENGINEERING</h4>
+                <p>Fast, secure and modern hand-coded websites for business growth.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fab fa-android"></i>
+                <h4>ANDROID APP DEVELOPMENT</h4>
+                <p>Custom Android apps, WebView apps and Play Store publishing.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-desktop"></i>
+                <h4>WINDOWS SOFTWARE</h4>
+                <p>Billing software, automation tools and desktop applications.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-credit-card"></i>
+                <h4>PAYMENT INTEGRATION</h4>
+                <p>UPI, Razorpay, payment gateway setup for websites and apps.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-qrcode"></i>
+                <h4>QR CODE ENGINEERING</h4>
+                <p>Dynamic and static QR code solutions for business branding.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-microchip"></i>
+                <h4>AI VISUAL ARCHITECTURE</h4>
+                <p>AI-powered branding, creative design and digital visuals.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-print"></i>
+                <h4>PRINT PRODUCTION</h4>
+                <p>CMYK print-ready designs, banners, visiting cards and ads.</p>
+            </div>
+
         </div>
+
     </section>
+    <!-- SERVICES SECTION END -->
 
     <section id="technical" class="page" style="background: #000;">
-        <h2 class="section-h">Technical Superiority</h2>
+        <h2 class="section-h">Technical Advantages</h2>
+
         <div class="content-box">
-            <table class="global-table">
-                <thead><tr><th>Feature</th><th>Max Efex (Custom Code)</th><th>Generic Templates</th></tr></thead>
+
+            <table class="global-table" style="width:100%; font-size:0.9rem;">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Max Efex Custom Development</th>
+                        <th>Standard Templates</th>
+                    </tr>
+                </thead>
+
                 <tbody>
-                    <tr><td>Speed</td><td class="highlight">Blazing Fast / Instant Load</td><td class="warning">Slow (Heavy Plugins)</td></tr>
-                    <tr><td>Security</td><td class="highlight">No Database / Unhackable</td><td class="warning">Vulnerable to Attacks</td></tr>
-                    <tr><td>Ownership</td><td class="highlight">100% Clean HTML Ownership</td><td class="warning">Dependent on Updates</td></tr>
+                    <tr>
+                        <td>Performance</td>
+                        <td class="highlight">Optimized Speed & Fast Loading</td>
+                        <td class="warning">May Slow Due to Heavy Plugins</td>
+                    </tr>
+
+                    <tr>
+                        <td>Security</td>
+                        <td class="highlight">Custom Architecture – Enhanced Protection</td>
+                        <td class="warning">Plugin Dependency Risks</td>
+                    </tr>
+
+                    <tr>
+                        <td>Ownership</td>
+                        <td class="highlight">Full Code Ownership & Control</td>
+                        <td class="warning">Platform Dependent</td>
+                    </tr>
+
+                    <tr>
+                        <td>Scalability</td>
+                        <td class="highlight">Flexible Growth Ready</td>
+                        <td class="warning">Limited Customization</td>
+                    </tr>
+
                 </tbody>
             </table>
+            <div style="margin-top:50px; border-top:1px solid #222; padding-top:40px;">
+
+                <h3 style="color:var(--accent); margin-bottom:20px;">Why Every Business Needs a Website</h3>
+                <p style="color:#888; margin-bottom:20px;">
+                    A professional website builds credibility, increases visibility, and provides a
+                    24/7 digital presence for your business. Customers today search online before
+                    making decisions. A fast, well-designed website helps establish trust, showcase
+                    services clearly, and generate consistent leads.
+                </p>
+
+                <h3 style="color:var(--accent); margin-bottom:20px;">Indian Domain Advantage (.in / .co.in)</h3>
+                <p style="color:#888; margin-bottom:20px;">
+                    Using Indian domain extensions like <b>.in</b> or <b>.co.in</b> improves local trust
+                    and search relevance within India. Customers often prefer local domain businesses,
+                    and search engines prioritize region-specific domains for local results, improving
+                    visibility among Indian audiences.
+                </p>
+
+                <h3 style="color:var(--accent); margin-bottom:20px;">Power of Google SEO</h3>
+                <p style="color:#888;">
+                    Search Engine Optimization (SEO) helps your business appear on Google when customers
+                    search for services. Proper SEO increases website traffic, builds brand authority,
+                    and reduces dependence on paid advertising. A technically optimized website ensures
+                    better ranking, faster loading, and long-term digital growth.
+                </p>
+
+            </div>
+
         </div>
+
+        <!-- MOBILE FIX -->
+        <style>
+            @media(max-width:768px) {
+
+                .global-table {
+                    font-size: 13px;
+                }
+
+                .global-table th,
+                .global-table td {
+                    padding: 10px;
+                    word-break: break-word;
+                }
+
+                .section-h {
+                    font-size: 24px;
+                }
+
+            }
+        </style>
+
     </section>
+
 
     <section id="establishment" class="page">
         <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 40px;">
-            <img src="images/me.png" alt="Aneesh K Rajeev" style="width: 200px; height: 200px; border-radius: 50%; border: 3px solid var(--accent); object-fit: cover;">
+            <img src="images/me.png" alt="Aneesh K Rajeev"
+                style="width: 200px; height: 200px; border-radius: 50%; border: 3px solid var(--accent); object-fit: cover;">
         </div>
         <div style="text-align:center; max-width:800px; margin: 0 auto;">
             <h2 style="color:var(--accent); font-size:2rem; margin-bottom:10px;">MAX EFEX</h2>
-            <p style="color:#666; letter-spacing: 2px; margin-bottom: 20px; font-weight: bold;">Graphics and Visual Solutions</p>
-            <p style="color:#888;">"Max Efex bridges the gap between creative artistry and technical engineering, delivering visual systems optimized for high-performance business results with 15 years of expertise."</p>
+            <p style="color:#666; letter-spacing: 2px; margin-bottom: 20px; font-weight: bold;">Graphics and Visual
+                Solutions</p>
+            <p style="color:#888;">"Max Efex bridges the gap between creative artistry and technical engineering,
+                delivering visual systems optimized for high-performance business results with 15 years of expertise."
+            </p>
         </div>
     </section>
 
-    <footer>
-        <section id="legal" style="padding: 40px 10%; background: #080808; font-size: 0.75rem; color: #444; line-height: 1.8;">
-            <h3 style="color: var(--accent); margin-bottom: 15px; font-size: 0.9rem;">INTELLECTUAL PROPERTY NOTICE</h3>
-            <p>All Visual Engineering systems and custom code architectures are the proprietary property of Aneesh K Rajeev. Unauthorized reproduction or commercial distribution is strictly prohibited.</p>
-        </section>
+    <footer style="background:#080808; border-top:1px solid #111; padding:50px 10%;">
+
+        <div style="display:flex; flex-wrap:wrap; gap:40px; justify-content:space-between;">
+
+            <!-- BRAND -->
+            <div style="flex:1; min-width:250px;">
+                <h2 style="color:var(--accent); margin-bottom:10px;">MAX EFEX</h2>
+                <p style="color:#777; font-size:0.9rem;">
+                    Creative Engineering • Branding • Websites • Digital Strategy.<br>
+                    Delivering professional visual solutions since 2011.
+                </p>
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div style="flex:1; min-width:200px;">
+                <h4 style="color:#fff; margin-bottom:15px;">Quick Links</h4>
+                <p><a href="#services" style="color:#888; text-decoration:none;">Services</a></p>
+                <p><a href="#offers" style="color:#888; text-decoration:none;">Offers</a></p>
+                <p><a href="#technical" style="color:#888; text-decoration:none;">Technical</a></p>
+                <p><a href="#about" style="color:#888; text-decoration:none;">About</a></p>
+            </div>
+
+            <!-- CONTACT -->
+            <div style="flex:1; min-width:250px;">
+                <h4 style="color:#fff; margin-bottom:15px;">Contact</h4>
+                <p style="color:#888;">📞 +91 99616 99196</p>
+                <p style="color:#888;">📧 mediamaxefex@gmail.com</p>
+                <p style="color:#888;">Kerala, India</p>
+            </div>
+
+        </div>
+
+        <hr style="border:0; border-top:1px solid #111; margin:40px 0;">
+
+        <div style="text-align:center; color:#555; font-size:0.8rem;">
+            © 2026 Max Efex Graphics. All Rights Reserved.<br>
+            Designed & Engineered by Max Efex.
+        </div>
+
     </footer>
+
 
 </body>
 
 </html>
-
