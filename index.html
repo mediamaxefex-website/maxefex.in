@@ -1,619 +1,1216 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>    
-    <meta charset="UTF-8">    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>The Complete Visual Architect & Strategy Group</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-    
-    <style>        
-        :root {            
-            --accent: #ff6600;            
-            --deep-red: #d32f2f;            
-            --bg: #050505;            
-            --card-bg: #0c0c0c;            
-            --text: #e0e0e0;        
-        }
-        
-        /* RESET & GLOBAL */        
-        * {            
-            margin: 0;            
-            padding: 0;            
-            box-sizing: border-box;            
-            font-family: 'Inter', 'Segoe UI', sans-serif;            
-            scroll-behavior: smooth;        
-        }
-        
-        body {            
-            background-color: var(--bg);            
-            color: var(--text);            
-            line-height: 1.6;        
-        }
-        
-        .sub-brand {            
-            display: block;            
-            font-size: 1rem;            
-            color: #aaa;            
-            letter-spacing: 6px;            
-            font-weight: 700;            
-            margin-top: 6px;            
-            text-transform: uppercase;        
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAX EFEX Graphics | Premium Branding, Websites & Visual Strategy</title>
+    <meta name="description" content="MAX EFEX Graphics delivers premium logo design, websites, branding, print solutions, SEO support, and digital strategy for businesses in Kerala and across India.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg: #0a0d12;
+            --panel: rgba(15, 19, 25, 0.9);
+            --panel-soft: rgba(22, 27, 34, 0.92);
+            --border: rgba(255, 255, 255, 0.08);
+            --text: #f5f1eb;
+            --muted: #9ea7b3;
+            --muted-strong: #d8dee6;
+            --accent: #ff7b2c;
+            --accent-soft: #ffbf96;
+            --success: #5ccc8f;
+            --danger: #ff9a72;
+            --shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
+            --radius-lg: 28px;
+            --radius-md: 22px;
+            --radius-sm: 16px;
+            --max: 1200px;
         }
 
-        /* NEW PACKAGES SECTION STYLES */
-.package-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
-    gap: 20px; 
-    margin-top: 40px; 
-}
-
-.package-card { 
-    background: #0c0c0c; 
-    padding: 35px 20px; 
-    border-radius: 15px; 
-    border: 1px solid #1a1a1a; 
-    transition: 0.3s; 
-    position: relative; 
-    display: flex; 
-    flex-direction: column;
-}
-
-.package-card:hover { transform: translateY(-8px); }
-
-.package-card h3 { font-size: 1.3rem; margin-bottom: 15px; text-transform: uppercase; font-weight: 900; }
-.price { font-size: 2.5rem; font-weight: 900; margin-bottom: 25px; display: block; }
-
-.package-card ul { list-style: none; margin-bottom: 30px; flex-grow: 1; }
-.package-card li { font-size: 0.85rem; color: #aaa; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; text-align: left; }
-
-.btn-select { 
-    padding: 12px; 
-    border-radius: 4px; 
-    text-decoration: none; 
-    font-weight: 800; 
-    text-align: center; 
-    font-size: 0.75rem; 
-    transition: 0.3s; 
-    text-transform: uppercase;
-    background: transparent;
-}
-
-/* Color Coding */
-.p-starter { border-top: 4px solid #2ecc71; }
-.p-starter h3, .p-starter .price, .p-starter i { color: #2ecc71; }
-.btn-starter { border: 1px solid #2ecc71; color: #2ecc71; }
-.btn-starter:hover { background: #2ecc71; color: #000; }
-
-.p-standard { border-top: 4px solid #3498db; }
-.p-standard h3, .p-standard .price, .p-standard i { color: #3498db; }
-.btn-standard { border: 1px solid #3498db; color: #3498db; }
-.btn-standard:hover { background: #3498db; color: #000; }
-
-.p-premium { border-top: 4px solid #9b59b6; }
-.p-premium h3, .p-premium .price, .p-premium i { color: #9b59b6; }
-.btn-premium { border: 1px solid #9b59b6; color: #9b59b6; }
-.btn-premium:hover { background: #9b59b6; color: #000; }
-
-.p-bizpro { border-top: 4px solid #f1c40f; border-left: 1px solid #f1c40f; border-right: 1px solid #f1c40f; background: #0e0e0e; }
-.p-bizpro h3, .p-bizpro .price, .p-bizpro i { color: #f1c40f; }
-.btn-pro { background: #f1c40f; color: #000; border: none; }
-.btn-pro:hover { filter: brightness(1.2); }
-
-/* Badges */
-.badge { position: absolute; top: -10px; right: 20px; padding: 3px 10px; border-radius: 4px; font-weight: 900; font-size: 0.6rem; text-transform: uppercase; color: #000; }
-        
-        /* NAVIGATION */        
-        nav {            
-            background: rgba(5, 5, 5, 0.98);            
-            padding: 15px 8%;            
-            display: flex;            
-            justify-content: space-between;            
-            align-items: center;            
-            position: fixed;            
-            width: 100%;            
-            top: 0;            
-            z-index: 1000;            
-            border-bottom: 1px solid #1a1a1a;        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
         }
-        
-        .nav-links a {            
-            color: #888;            
-            text-decoration: none;            
-            margin-left: 25px;            
-            font-weight: 600;            
-            font-size: 0.8rem;            
-            letter-spacing: 1px;            
-            transition: 0.3s;        
+
+        body {
+            font-family: "Manrope", sans-serif;
+            color: var(--text);
+            line-height: 1.65;
+            background:
+                radial-gradient(circle at top left, rgba(255, 123, 44, 0.22), transparent 28%),
+                radial-gradient(circle at 80% 12%, rgba(92, 204, 143, 0.08), transparent 16%),
+                linear-gradient(180deg, #080b10 0%, #0b1016 52%, #070a0f 100%);
         }
-        
-        .nav-links a:hover {            
-            color: var(--accent);        
-        }
-        
-        /* SECTIONS */        
-        .page {            
-            padding: 120px 10% 60px;            
-            min-height: 100vh;            
-            display: flex;            
-            flex-direction: column;            
-            justify-content: center;        
-        }
-        
-        .hero {            
-            text-align: center;        
-        }
-        
-        /* LOGO & BRANDING */        
-        .logo-main {            
-            width: 100px;            
-            margin-bottom: 10px;            
-            filter: drop-shadow(0 0 15px rgba(255, 102, 0, 0.3));        
-        }
-        
-        .company-name {            
-            font-size: 3.5rem;            
-            color: var(--accent);            
-            font-weight: 900;            
-            letter-spacing: 1px;            
-            text-transform: uppercase;            
-            line-height: 1;        
-        }
-        
-        .title-sub {            
-            font-size: 0.95rem;            
-            color: #666;            
-            letter-spacing: 3px;            
-            margin-bottom: 25px;            
-            text-transform: uppercase;            
-            margin-top: 10px;        
-        }
-        
-        .legacy-badge {            
-            display: inline-block;            
-            padding: 8px 25px;            
-            background: linear-gradient(90deg, #ffcc00, #ff6600, #d32f2f);            
-            border-radius: 4px;            
-            font-weight: 800;            
-            font-size: 0.8rem;            
-            letter-spacing: 1px;            
-            color: #fff;            
-            margin-bottom: 30px;        
-        }
-        
-        /* FEATURED IMAGES */
-        .section-featured-img {
-            width: 100%;
-            max-width: 900px;
-            height: auto;
-            border-radius: 15px;
-            margin: 0 auto 40px auto;
+
+        img {
+            max-width: 100%;
             display: block;
-            border: 1px solid #1a1a1a;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(var(--max), calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(9, 9, 9, 0.82);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(16px);
+        }
+
+        .site-header .container {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand,
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .brand img,
+        .footer-brand img {
+            width: 56px;
+            height: 56px;
+            object-fit: contain;
+            padding: 8px;
+            border-radius: 16px;
+            background: linear-gradient(145deg, rgba(255, 106, 19, 0.18), rgba(255, 255, 255, 0.03));
+            border: 1px solid var(--border);
+        }
+
+        .brand strong,
+        .footer-brand strong,
+        h1,
+        h2,
+        h3,
+        .price {
+            font-family: "Sora", sans-serif;
+        }
+
+        .brand strong,
+        .footer-brand strong {
+            display: block;
+            letter-spacing: 0.08em;
+        }
+
+        .brand span,
+        .footer-brand span,
+        .section-kicker {
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 0.76rem;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .nav a {
+            color: var(--muted-strong);
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .nav .nav-cta,
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), #ff944f);
+            color: #180d08;
+            box-shadow: 0 14px 30px rgba(255, 106, 19, 0.28);
+        }
+
+        .nav .nav-cta {
+            padding: 12px 18px;
+            border-radius: 999px;
+            font-weight: 800;
+        }
+
+        .hero,
+        .section,
+        .footer {
+            padding: 34px 0;
+        }
+
+        .hero-grid,
+        .about-grid,
+        .tech-grid,
+        .founder-grid,
+        .footer-grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        .hero-grid {
+            grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+        }
+
+        .about-grid,
+        .tech-grid,
+        .founder-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .footer-grid {
+            grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(180px, 0.7fr));
+        }
+
+        .panel,
+        .card,
+        .package,
+        .service,
+        .footer-panel {
+            background: linear-gradient(180deg, var(--panel) 0%, var(--panel-soft) 100%);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(18px);
+        }
+
+        .hero-copy,
+        .hero-side,
+        .section-panel,
+        .footer-panel {
+            padding: 34px;
+        }
+
+        .hero-copy {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-copy::after {
+            content: "";
+            position: absolute;
+            top: -80px;
+            right: -60px;
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 106, 19, 0.22), transparent 68%);
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            margin-bottom: 18px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--accent-soft);
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            font-size: 0.78rem;
+            font-weight: 800;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .hero-logo {
+            width: 84px;
+            margin-bottom: 18px;
+            filter: drop-shadow(0 12px 28px rgba(255, 106, 19, 0.24));
+        }
+
+        h1 {
+            font-size: clamp(2.8rem, 5vw, 5rem);
+            line-height: 0.95;
+            letter-spacing: -0.04em;
+        }
+
+        h1 span {
+            display: block;
+            margin-top: 14px;
+            color: var(--accent-soft);
+            letter-spacing: 0.38em;
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+
+        .lead {
+            max-width: 760px;
+            margin-top: 22px;
+            color: var(--muted-strong);
+            font-size: 1.05rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 28px;
+        }
+
+        .stat,
+        .contact-item,
+        .quote,
+        .cta-box,
+        .tech-note {
+            padding: 18px;
+            border-radius: var(--radius-sm);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .stat strong {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 1.05rem;
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .hero-actions,
+        .contact-list,
+        .social-links,
+        .site-list,
+        .package-list,
+        .tech-notes,
+        .footer-links {
+            display: grid;
+            gap: 12px;
+        }
+
+        .hero-actions {
+            grid-template-columns: repeat(2, minmax(0, max-content));
+            margin-top: 28px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 54px;
+            padding: 14px 22px;
+            border-radius: 999px;
+            font-weight: 800;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .hero-side {
+            display: grid;
+            gap: 22px;
+            align-content: start;
+        }
+
+        .showcase {
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .showcase img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
 
-        /* BUTTONS */        
-        .btn-stack {            
-            display: grid;            
-            grid-template-columns: 1fr;            
-            gap: 12px;            
-            max-width: 420px;            
-            margin: 0 auto;        
-        }
-        
-        .group-label {            
-            color: #444;            
-            font-size: 0.7rem;            
-            font-weight: 800;            
-            text-transform: uppercase;            
-            letter-spacing: 2px;            
-            margin: 25px 0 10px;            
-            text-align: center;        
-        }
-        
-        .btn {            
-            min-height: 62px;            
-            padding: 12px 20px;            
-            border-radius: 6px;            
-            text-decoration: none;            
-            font-weight: 700;            
-            font-size: 0.9rem;            
-            display: flex;            
-            align-items: center;            
-            justify-content: center;            
-            gap: 12px;            
-            transition: 0.3s;            
-            color: white;            
-            width: 100%;            
-            text-align: center;            
-            line-height: 1.4;            
-            white-space: normal;            
-            position: relative;            
-            overflow: hidden;        
-        }
-        
-        .btn-call { background: #ff6600; }
-        .btn-wa { background: #128C7E; }
-        .btn-mail { background: #1a1a1a; border: 1px solid #222; color: #aaa; }
-        .btn-pixabay { background: #232a34; border: 1px solid #333; }
-        .btn-yt { background: #c4302b; }
-        .btn-fb { background: #3b5998; }
-        .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #bc1888); }
-        
-        .btn:hover {            
-            transform: translateY(-2px);            
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);            
-            filter: brightness(1.2);            
-            color: #fff;        
-        }
-        
-        /* PREMIUM ACTION PANEL (PC & Mobile Friendly) */        
-        .premium-action-panel {            
-            display: grid;            
-            grid-template-columns: 1fr 1fr;            
-            gap: 40px;            
-            max-width: 900px;            
-            margin: 40px auto 0;            
-            background: rgba(15, 15, 15, 0.6);            
-            border: 1px solid #1a1a1a;            
-            border-radius: 20px;            
-            padding: 40px;            
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);            
-            backdrop-filter: blur(10px);        
-        }
-        
-        .action-column {            
-            display: flex;            
-            flex-direction: column;            
-            gap: 12px;        
-        }
-        
-        .action-column .group-label {            
-            margin: 0 0 15px 0;            
-            color: var(--accent);            
-            text-align: left;            
-            font-size: 0.8rem;            
-            border-bottom: 1px solid #222;            
-            padding-bottom: 10px;            
-            letter-spacing: 3px;        
-        }
-        
-        .premium-action-panel .btn {            
-            justify-content: flex-start;            
-            padding-left: 25px;            
-            font-size: 0.85rem;            
-            min-height: 55px;            
-        }
-        
-        /* CONTENT AREAS */        
-        .section-h {            
-            font-size: 1.8rem;            
-            color: var(--accent);            
-            margin-bottom: 25px;            
-            text-align: center;            
-            text-transform: uppercase;        
-        }
-        
-        .content-box {            
-            background: var(--card-bg);            
-            padding: 40px;            
-            border-radius: 15px;            
-            border: 1px solid #1a1a1a;        
-        }
-        
-        /* SERVICES GRID */        
-        .service-grid {            
-            display: grid;            
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));            
-            gap: 25px;        
-        }
-        
-        .service-card {            
-            background: #0c0c0c;            
-            padding: 35px;            
-            border-radius: 12px;            
-            border: 1px solid #1a1a1a;            
-            transition: 0.3s;            
-            text-align: left;        
-        }
-        
-        .service-card:hover {            
-            border-color: var(--accent);            
-            transform: translateY(-5px);        
-        }
-        
-        .service-card i {            
-            font-size: 1.8rem;            
-            color: var(--accent);            
-            margin-bottom: 20px;            
-            display: block;        
-        }
-        
-        .service-card h4 {            
-            color: #fff;            
-            margin-bottom: 15px;            
-            text-transform: uppercase;            
-            letter-spacing: 1px;        
-        }
-        
-        .service-card p {            
-            font-size: 0.9rem;            
-            color: #888;            
-            line-height: 1.6;        
-        }
-        
-        /* TABLES */        
-        .global-table {            
-            width: 100%;            
-            border-collapse: collapse;            
-            margin-bottom: 30px;            
-            font-size: 0.9rem;        
-        }
-        
-        .global-table th,        
-        .global-table td {            
-            padding: 18px;            
-            text-align: left;            
-            border-bottom: 1px solid #222;        
-        }
-        
-        .global-table th {            
-            color: #555;            
-            text-transform: uppercase;            
-            letter-spacing: 1px;            
-            font-size: 0.75rem;        
-        }
-        
-        .highlight { color: #4caf50; font-weight: 700; }
-        .warning { color: #d32f2f; font-weight: 700; }
-        
-        footer {            
-            text-align: center;            
-            padding: 60px 20px;            
-            border-top: 1px solid #111;            
-            font-size: 0.8rem;            
-            color: #333;            
-            letter-spacing: 1px;        
+        .badge {
+            display: inline-block;
+            padding: 9px 14px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, rgba(255, 106, 19, 0.18), rgba(255, 193, 149, 0.08));
+            color: var(--accent-soft);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-size: 0.76rem;
+            font-weight: 800;
         }
 
-        /* MOBILE FIXES */
-        @media (max-width: 768px) {            
-            .company-name { font-size: 2.5rem; }
-            .btn-stack { max-width: 100%; }
-            .page { padding-top: 100px; }        
-            .premium-action-panel {                
-                grid-template-columns: 1fr;                
-                padding: 25px;                
-                gap: 40px;            
+        .contact-item {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+        }
+
+        .social-links {
+            grid-template-columns: repeat(3, minmax(0, max-content));
+            gap: 10px;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            min-height: 40px;
+            padding: 10px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            color: var(--text);
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.01em;
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .social-btn i {
+            width: 16px;
+            text-align: center;
+        }
+
+        .social-btn.whatsapp {
+            background: linear-gradient(135deg, #128c7e, #1ebea5);
+        }
+
+        .social-btn.youtube {
+            background: linear-gradient(135deg, #b81d18, #ff3d2e);
+        }
+
+        .social-btn.facebook {
+            background: linear-gradient(135deg, #244a9a, #4267b2);
+        }
+
+        .social-btn.instagram {
+            background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #bc1888);
+        }
+
+        .social-btn.pixabay {
+            background: linear-gradient(135deg, #1b2330, #2c3a52);
+        }
+
+        .tech-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100%;
+            padding: 24px;
+            background:
+                radial-gradient(circle at top, rgba(255, 123, 44, 0.12), transparent 30%),
+                linear-gradient(180deg, rgba(17, 22, 29, 0.98), rgba(11, 15, 21, 0.98));
+        }
+
+        .tech-visual img {
+            width: 100%;
+            max-height: 760px;
+            object-fit: contain;
+            object-position: center;
+            border-radius: 18px;
+        }
+
+        .icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+            background: rgba(255, 106, 19, 0.14);
+            color: var(--accent-soft);
+            flex: 0 0 auto;
+        }
+
+        .section-panel {
+            padding: 34px;
+        }
+
+        .section-head {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            align-items: end;
+            margin-bottom: 24px;
+        }
+
+        .section-head p {
+            max-width: 620px;
+            color: var(--muted);
+        }
+
+        h2 {
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            line-height: 1.05;
+        }
+
+        .image-frame {
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .image-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-copy,
+        .founder-copy {
+            display: grid;
+            gap: 16px;
+        }
+
+        .packages {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 24px;
+        }
+
+        .package {
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .package::before {
+            content: "";
+            position: absolute;
+            inset: 0 0 auto;
+            height: 4px;
+            background: var(--tone, var(--accent));
+        }
+
+        .package.featured {
+            background: linear-gradient(180deg, rgba(255, 106, 19, 0.12), rgba(18, 18, 18, 0.9));
+            border-color: rgba(255, 193, 149, 0.18);
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 7px 12px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--muted-strong);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-size: 0.72rem;
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+
+        .price {
+            font-size: 2.3rem;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .price small {
+            font-family: "Manrope", sans-serif;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .package-list {
+            list-style: none;
+            margin-bottom: 18px;
+        }
+
+        .package-list li {
+            display: flex;
+            gap: 10px;
+            align-items: start;
+            color: var(--muted);
+        }
+
+        .package-list i {
+            margin-top: 4px;
+            color: var(--tone, var(--accent));
+        }
+
+        .package .btn {
+            width: 100%;
+            border-radius: 18px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 24px;
+        }
+
+        .service {
+            padding: 22px;
+        }
+
+        .service .icon {
+            margin-bottom: 14px;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 16px 10px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            vertical-align: top;
+        }
+
+        th {
+            color: var(--muted-strong);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-size: 0.76rem;
+        }
+
+        .highlight {
+            color: var(--success);
+            font-weight: 700;
+        }
+
+        .warning {
+            color: var(--danger);
+            font-weight: 700;
+        }
+
+        .founder-photo {
+            overflow: hidden;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .founder-photo img {
+            width: 100%;
+            aspect-ratio: 1 / 1.05;
+            object-fit: cover;
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .chips span {
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            color: var(--muted-strong);
+            font-size: 0.84rem;
+        }
+
+        .site-list {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            margin-top: 18px;
+        }
+
+        .site-item {
+            padding: 18px;
+            border-radius: var(--radius-sm);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .site-item h4 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .site-item h4 i {
+            color: var(--accent-soft);
+        }
+
+        .footer-panel {
+            padding: 28px 30px;
+        }
+
+        .footer-links a,
+        .footer-panel p {
+            color: var(--muted);
+        }
+
+        .copyright {
+            margin-top: 18px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: #8f8680;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 1080px) {
+            .hero-grid,
+            .about-grid,
+            .tech-grid,
+            .founder-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
             }
-            .global-table { font-size: 13px; }
-            .global-table th, .global-table td { padding: 10px; word-break: break-word; }
-            .section-h { font-size: 24px; }
-        }    
+
+            .packages {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .services {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .site-header .container {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-top: 14px;
+                padding-bottom: 14px;
+            }
+
+            .nav {
+                justify-content: flex-start;
+            }
+
+            .hero-copy,
+            .hero-side,
+            .section-panel,
+            .footer-panel {
+                padding: 22px;
+            }
+
+            .hero-actions,
+            .packages,
+            .services,
+            .social-links,
+            .site-list {
+                grid-template-columns: 1fr;
+            }
+
+            .section-head {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <nav>        
-        <div style="font-weight:900; font-size: 1.2rem; color:var(--accent);">MAX EFEX</div>        
-        <div class="nav-links">            
-            <a href="#home">IDENTITY</a>            
-            <a href="#about">ABOUT</a>            
-            <a href="#offers">OFFERS</a>            
-            <a href="#services">SERVICES</a>            
-            <a href="#technical">TECHNICAL</a>        
-        </div>    
-    </nav>
-
-    <section id="home" class="page">        
-        <div class="hero">            
-            <img src="images/image_3.png" alt="ME Logo" class="logo-main">            
-            <h1 class="company-name">MAX EFEX<br><span class="sub-brand">GRAPHICS</span></h1>
-            <p class="title-sub">The Complete Visual Architect & Strategy Group</p>            
-            <span class="legacy-badge">15 YEARS OF EXCELLENCE</span>        
+    <header class="site-header">
+        <div class="container">
+            <a href="#home" class="brand">
+                <img src="images/image_3.png" alt="MAX EFEX logo">
+                <div>
+                    <strong>MAX EFEX</strong>
+                    <span>Graphics</span>
+                </div>
+            </a>
+            <nav class="nav" aria-label="Primary">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#packages">Packages</a>
+                <a href="#services">Services</a>
+                <a href="#technical">Technical</a>
+                <a href="#contact" class="nav-cta">Contact</a>
+            </nav>
         </div>
-        
-        <img src="images/identity.png" alt="Animation Engineer Workspace" class="section-featured-img">
+    </header>
 
-        <div class="premium-action-panel">
-            <div class="action-column">                
-                <div class="group-label">Direct Contact</div>                
-                <a href="tel:+919961699196" class="btn btn-call"><i class="fas fa-phone-alt"></i> Call +91 99616 99196</a>                
-                <a href="https://wa.me/919961699196" class="btn btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp Instant Chat</a>                
-                <a href="mailto:mediamaxefex@gmail.com" class="btn btn-mail"><i class="fas fa-envelope"></i> mediamaxefex@gmail.com</a>                
-                <a href="mailto:studiomaxefex@gmail.com" class="btn btn-mail"><i class="fas fa-envelope-open"></i> studiomaxefex@gmail.com</a>            
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="panel hero-copy">
+                        <div class="eyebrow">The Complete Visual Architect &amp; Strategy Group</div>
+                        <img src="images/image_3.png" alt="MAX EFEX emblem" class="hero-logo">
+                        <h1>MAX EFEX <span>Graphics</span></h1>
+                        <p class="lead">
+                            MAX EFEX delivers premium branding, websites, digital presence, and production-ready visuals
+                            designed to position businesses with clarity, credibility, and long-term market value.
+                        </p>
+
+                        <div class="stats">
+                            <div class="stat">
+                                <strong>15+ Years</strong>
+                                <p class="muted">Established experience in branding, digital presentation, and commercial design execution.</p>
+                            </div>
+                            <div class="stat">
+                                <strong>Responsive Delivery</strong>
+                                <p class="muted">Clear communication, dependable turnaround, and mobile-focused implementation.</p>
+                            </div>
+                            <div class="stat">
+                                <strong>Integrated Service</strong>
+                                <p class="muted">Brand identity, websites, QR, SEO, print, and digital support from one studio.</p>
+                            </div>
+                        </div>
+
+                        <div class="hero-actions">
+                            <a href="https://wa.me/919961699196" class="btn btn-primary" target="_blank" rel="noreferrer">
+                                <i class="fab fa-whatsapp"></i>
+                                Chat on WhatsApp
+                            </a>
+                            <a href="tel:+919961699196" class="btn btn-secondary">
+                                <i class="fas fa-phone-alt"></i>
+                                Call +91 99616 99196
+                            </a>
+                        </div>
+                    </div>
+
+                    <aside class="panel hero-side" id="contact">
+                        <div class="showcase">
+                            <img src="images/identity.png" alt="MAX EFEX identity showcase">
+                        </div>
+                        <div>
+                            <span class="badge">15 Years of Excellence</span>
+                        </div>
+                        <div class="contact-list">
+                            <a class="contact-item" href="mailto:mediamaxefex@gmail.com">
+                                <div class="icon"><i class="fas fa-envelope"></i></div>
+                                <div>
+                                    <strong>Primary Email</strong>
+                                    <p class="muted">mediamaxefex@gmail.com</p>
+                                </div>
+                            </a>
+                            <a class="contact-item" href="mailto:studiomaxefex@gmail.com">
+                                <div class="icon"><i class="fas fa-envelope-open"></i></div>
+                                <div>
+                                    <strong>Studio Email</strong>
+                                    <p class="muted">studiomaxefex@gmail.com</p>
+                                </div>
+                            </a>
+                            <a class="contact-item" href="https://www.youtube.com/@mediamaxefex" target="_blank" rel="noreferrer">
+                                <div class="icon"><i class="fab fa-youtube"></i></div>
+                                <div>
+                                    <strong>Visual Portfolio</strong>
+                                    <p class="muted">Selected channels showcasing branding, media, and visual production work.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="social-links">
+                            <a class="social-btn whatsapp" href="https://wa.me/919961699196" target="_blank" rel="noreferrer">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a class="social-btn youtube" href="https://www.youtube.com/@mediamaxefex" target="_blank" rel="noreferrer">
+                                <i class="fab fa-youtube"></i>
+                                <span>YouTube</span>
+                            </a>
+                            <a class="social-btn facebook" href="https://www.facebook.com/MAXEFEX/" target="_blank" rel="noreferrer">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a class="social-btn instagram" href="https://instagram.com/dezigner_maxefex" target="_blank" rel="noreferrer">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a class="social-btn pixabay" href="https://pixabay.com/users/maxefex-5447583/" target="_blank" rel="noreferrer">
+                                <i class="fas fa-camera"></i>
+                                <span>Pixabay</span>
+                            </a>
+                        </div>
+                    </aside>
+                </div>
             </div>
-            <div class="action-column">                
-                <div class="group-label">Visual Portfolio</div>                
-                <a href="https://pixabay.com/users/maxefex-5447583/" target="_blank" class="btn btn-pixabay"><i class="fas fa-camera"></i> High-Resolution Stock Gallery</a>                
-                <a href="https://www.youtube.com/@mediamaxefex" target="_blank" class="btn btn-yt"><i class="fab fa-youtube"></i> Watch YouTube Channel</a>                
-                <a href="https://www.facebook.com/MAXEFEX/" target="_blank" class="btn btn-fb"><i class="fab fa-facebook-f"></i> Follow on Facebook</a>                
-                <a href="https://instagram.com/dezigner_maxefex" class="btn btn-insta"><i class="fab fa-instagram"></i> View Instagram Portfolio</a>            
+        </section>
+
+        <section class="section" id="about">
+            <div class="container">
+                <div class="panel section-panel">
+                    <div class="section-head">
+                        <div>
+                            <div class="section-kicker">About MAX EFEX</div>
+                            <h2>A professional visual branding studio for businesses that value credibility and quality.</h2>
+                        </div>
+                        <p>
+                            Based in Kerala and serving clients across India, MAX EFEX combines brand identity, website design,
+                            production-ready design, and digital visibility support into one disciplined service practice.
+                        </p>
+                    </div>
+
+                    <div class="about-grid">
+                        <div class="image-frame">
+                            <img src="images/about.png" alt="MAX EFEX studio background">
+                        </div>
+                        <div class="about-copy">
+                            <p>
+                                We create brand identities, responsive websites, campaign visuals, QR systems, and
+                                production-ready design assets that help businesses present themselves with confidence and consistency.
+                            </p>
+                            <p>
+                                Every engagement is shaped around clarity, trust, and commercial value rather than decoration alone.
+                                The objective is to make each business more discoverable, more credible, and easier to engage.
+                            </p>
+                            <div class="quote">
+                                <strong>Established excellence since 2011</strong>
+                                <p class="muted">We do not follow trends blindly. We build visual systems that feel premium, clear, and durable.</p>
+                            </div>
+                            <div class="cta-box">
+                                <strong>Direct platforms</strong>
+                                <p class="muted">
+                                    <a href="https://pixabay.com/users/maxefex-5447583/" target="_blank" rel="noreferrer">Pixabay</a> |
+                                    <a href="https://www.facebook.com/MAXEFEX/" target="_blank" rel="noreferrer">Facebook</a> |
+                                    <a href="https://instagram.com/dezigner_maxefex" target="_blank" rel="noreferrer">Instagram</a> |
+                                    <a href="https://www.youtube.com/@mediamaxefex" target="_blank" rel="noreferrer">YouTube</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>    
-    </section>
+        </section>
 
-    <section id="about" class="page" style="background:#000;">        
-        <h2 class="section-h">Creative Brand & Visual Solutions</h2>        
-        
-        <img src="images/about.png" alt="Max Efex Studio History" class="section-featured-img">
+        <section class="section" id="packages">
+            <div class="container">
+                <div class="panel section-panel">
+                    <div class="section-head">
+                        <div>
+                            <div class="section-kicker">Website Packages</div>
+                            <h2>Website packages structured for professional presentation and business growth.</h2>
+                        </div>
+                        <p>One-year domain and hosting included. Each package is designed for performance, mobile usability, and brand confidence.</p>
+                    </div>
 
-        <div class="content-box" style="max-width:900px; margin:0 auto; text-align:center;">            
-            <h3 style="color:var(--accent); margin-bottom:20px; letter-spacing:2px;">Established Excellence Since 2011</h3>            
-            <p style="color:#888; font-size:0.95rem; margin-bottom:25px;">                
-                Max Efex is a creative branding studio with 15+ years of experience in logo design, digital visuals, website creation, and print media. Based in Kerala, we help businesses build strong brand presence through clean design, modern visuals, and professional presentation. We focus on clarity, creativity, and long-lasting brand value.
-            </p>            
-            <p style="color:#999; font-weight:600; letter-spacing:1px; text-transform: uppercase; font-size: 0.8rem;">                
-                We don’t follow trends. We engineer visual systems that endure.            
-            </p>        
-        </div>    
-    </section>
+                    <div class="about-grid">
+                        <div class="image-frame">
+                            <img src="images/offers.png" alt="MAX EFEX website package showcase">
+                        </div>
+                        <div class="cta-box">
+                            <strong>Need a full launch package?</strong>
+                            <p class="muted">
+                                Business Pro combines website design, logo support, QR solutions, business cards, SEO, and branding
+                                essentials into one complete launch package.
+                            </p>
+                        </div>
+                    </div>
 
-    <section id="offers" class="page" style="background: #050505;">
-    <h2 class="section-h">Web Design Packages</h2>
-    <p style="text-align: center; color: #666; margin-top: -15px; margin-bottom: 40px;">Professional business websites with 1 Year Domain & Hosting included.</p>
+                    <div class="packages">
+                        <article class="package" style="--tone:#39c17d;">
+                            <span class="pill">Starter</span>
+                            <h3>Starter Website</h3>
+                            <div class="price">&#8377;2,999 <small>/ launch</small></div>
+                            <ul class="package-list">
+                                <li><i class="fas fa-check-circle"></i><span>1 page architecture</span></li>
+                                <li><i class="fas fa-check-circle"></i><span>WhatsApp and email buttons</span></li>
+                                <li><i class="fas fa-check-circle"></i><span>Google Map integration</span></li>
+                                <li><i class="fas fa-check-circle"></i><span>Mobile-friendly design</span></li>
+                                <li><i class="fas fa-check-circle"></i><span>Supports .in and .co.in</span></li>
+                            </ul>
+                            <a class="btn btn-secondary" href="https://wa.me/919961699196?text=Interested%20in%20Starter%20Package%20%E2%82%B92,999" target="_blank" rel="noreferrer">Select Starter</a>
+                        </article>
 
-    <img src="images/offers.png" alt="The Identity Bundle" class="section-featured-img">
+                        <article class="package" style="--tone:#4ea8ff;">
+                            <span class="pill">Most Popular</span>
+                            <h3>Standard Website</h3>
+                            <div class="price">&#8377;4,999 <small>/ launch</small></div>
+                            <ul class="package-list">
+                                <li><i class="fas fa-check-circle"></i><span>2 to 4 page website</span></li>
+                                <li><i class="fas fa-check-circle"></i><span>Social media links included</span></li>
+                                <li><i class="fas fa-check-circle"></i><span>Customer reviews section</span></li>
+                                <li><i class="fas fa-check-circle"></i><span>Clean professional interface</span></li>
+                                <li><i class="fas fa-check-circle"></i><span>Supports .in and .co.in</span></li>
+                            </ul>
+                            <a class="btn btn-secondary" href="https://wa.me/919961699196?text=Interested%20in%20Standard%20Package%20%E2%82%B94,999" target="_blank" rel="noreferrer">Select Standard</a>
+                        </article>
 
-    <div class="package-grid">
-        <div class="package-card p-starter">
-            <h3>Starter</h3>
-            <div class="price">₹2,999</div>
-            <ul>
-                <li><i class="fas fa-check-circle"></i> 1 Page Architecture</li>
-                <li><i class="fas fa-check-circle"></i> WhatsApp & Email Button</li>
-                <li><i class="fas fa-check-circle"></i> Google Map Integration</li>
-                <li><i class="fas fa-check-circle"></i> Mobile-Friendly Design</li>
-                <li><i class="fas fa-check-circle"></i> Supports .in / .co.in</li>
-            </ul>
-            <a href="https://wa.me/919961699196?text=Interested in Starter Package ₹2999" class="btn-select btn-starter">SELECT STARTER</a>
-        </div>
+                        <article class="package" style="--tone:#ba7cff;">
+                            <span class="pill">Growth Ready</span>
+                            <h3>Premium Website</h3>
+                            <div class="price">&#8377;6,999 <small>/ launch</small></div>
+                            <ul class="package-list">
+                                <li><i class="fas fa-check-circle"></i><span>3 to 6 pages website</span></li>
+                                <li><i class="fas fa-check-circle"></i><span>Instagram and YouTube gallery support</span></li>
+                                <li><i class="fas fa-check-circle"></i><span>Google reviews display</span></li>
+                                <li><i class="fas fa-check-circle"></i><span>Basic SEO setup</span></li>
+                                <li><i class="fas fa-check-circle"></i><span>Supports .in, .co.in, and .com</span></li>
+                            </ul>
+                            <a class="btn btn-secondary" href="https://wa.me/919961699196?text=Interested%20in%20Premium%20Package%20%E2%82%B96,999" target="_blank" rel="noreferrer">Select Premium</a>
+                        </article>
 
-        <div class="package-card p-standard">
-            <div class="badge" style="background: #3498db;">MOST POPULAR</div>
-            <h3>Standard</h3>
-            <div class="price">₹4,999</div>
-            <ul>
-                <li><i class="fas fa-check-circle"></i> 2 to 4 Pages Website</li>
-                <li><i class="fas fa-check-circle"></i> Social Media Links</li>
-                <li><i class="fas fa-check-circle"></i> Customer Reviews Section</li>
-                <li><i class="fas fa-check-circle"></i> Clean Professional UI</li>
-                <li><i class="fas fa-check-circle"></i> Supports .in / .co.in</li>
-            </ul>
-            <a href="https://wa.me/919961699196?text=Interested in Standard Package ₹4999" class="btn-select btn-standard">SELECT STANDARD</a>
-        </div>
-
-        <div class="package-card p-premium">
-            <h3>Premium</h3>
-            <div class="price">₹6,999</div>
-            <ul>
-                <li><i class="fas fa-check-circle"></i> 3 to 6 Pages Website</li>
-                <li><i class="fas fa-check-circle"></i> Instagram & YouTube Gallery</li>
-                <li><i class="fas fa-check-circle"></i> Google Reviews Display</li>
-                <li><i class="fas fa-check-circle"></i> Basic SEO Setup</li>
-                <li><i class="fas fa-check-circle"></i> Supports .in / .co.in / .com</li>
-            </ul>
-            <a href="https://wa.me/919961699196?text=Interested in Premium Package ₹6999" class="btn-select btn-premium">SELECT PREMIUM</a>
-        </div>
-
-        <div class="package-card p-bizpro">
-            <div class="badge" style="background: #f1c40f;">BEST VALUE</div>
-            <h3>Business Pro</h3>
-            <div class="price">₹8,999</div>
-            <ul>
-                <li><i class="fas fa-star"></i> 4 to 6 Pages Website</li>
-                <li><i class="fas fa-star"></i> Logo Design & QR Code</li>
-                <li><i class="fas fa-star"></i> 500 Business Cards</li>
-                <li><i class="fas fa-star"></i> SEO & Google Location Setup</li>
-                <li><i class="fas fa-star"></i> Full Branding Identity</li>
-            </ul>
-            <a href="https://wa.me/919961699196?text=Interested in Business Pro Package ₹8999" class="btn-select btn-pro">SELECT BUSINESS PRO</a>
-        </div>
-    </div>
-</section>
-
-    <section id="services" class="page">
-        <h2 class="section-h">PROFESSIONAL SERVICES</h2>
-        
-        <img src="images/services.png" alt="Creative & Technical Process" class="section-featured-img">
-
-        <div class="service-grid">
-            <div class="service-card"><i class="fas fa-gem"></i><h4>BRAND IDENTITY & LOGO DESIGN</h4><p>Professional branding and logo design for business visibility. High-end brand identities ready for signage, CNC cutting and production.</p></div>
-            <div class="service-card"><i class="fas fa-bolt"></i><h4>ELITE RESPONSIVE WEBSITE DEVELOPMENT</h4><p>Fast, secure and modern websites that build trust and visibility.</p></div>
-            <div class="service-card"><i class="fab fa-android"></i><h4>ANDROID APP DEVELOPMENT</h4><p>Custom Android apps, WebView apps and Play Store publishing.</p></div>
-            <div class="service-card"><i class="fas fa-desktop"></i><h4>WINDOWS SOFTWARE</h4><p>Billing software, automation tools and desktop applications.</p></div>
-            <div class="service-card"><i class="fas fa-credit-card"></i><h4>PAYMENT INTEGRATION</h4><p>UPI, Razorpay, payment gateway secure setup for websites and apps.</p></div>
-            <div class="service-card"><i class="fas fa-qrcode"></i><h4>QR CODE SOLUTIONS</h4><p>Dynamic and static QR code solutions for business marketing, payments, branding and menus.</p></div>
-            <div class="service-card"><i class="fab fa-google"></i><h4>GOOGLE BUSINESS & SEO</h4><p>Leveraging Level 7 Local Guide authority to optimize Maps listings. We ensure accurate location pinning, high-ranking photo uploads, and SEO-driven updates for contact details and phone numbers to maximize local visibility.</p></div>
-            <div class="service-card"><i class="fas fa-pen-nib"></i><h4>SPECIALTY GRAPHICS & GLASS</h4><p>Precision graphic solutions including bespoke memento designing, high-resolution glass print layouts, and intricate etching glass designs tailored for premium presentations.</p></div>
-            <div class="service-card"><i class="fas fa-couch"></i><h4>INTERIOR DESIGN ARCHITECTURE</h4><p>Backed by 15 years of spatial design expertise in official partnership with Vinayaka Interiors, Thrissur. We engineer layouts that transform concepts into highly functional, premium living spaces.</p></div>
-            <div class="service-card"><i class="fas fa-microchip"></i><h4>AI VISUAL ARCHITECTURE</h4><p>Copyright-protected hyper-realistic AI models optimized for your brand identity. AI-powered branding, Logos, creative design and digital visuals.</p></div>
-            <div class="service-card"><i class="fas fa-print"></i><h4>READY TO PRINT FILES</h4><p>Industrial-ready files (CDR, AI, PDF) with precise CMYK print-ready designs, Glass designs, Wallpapers, banners, visiting cards and ads.</p></div>
-        </div>
-    </section>
-
-    <section id="technical" class="page" style="background: #000;">        
-        <h2 class="section-h">Technical Advantages</h2>
-        
-        <img src="images/technical.png" alt="Server & Engineering Performance" class="section-featured-img">
-
-        <div class="content-box">            
-            <table class="global-table">                
-                <thead>                    
-                    <tr><th>Feature</th><th>Max Efex Custom Development</th><th>Standard Templates</th></tr>                
-                </thead>                
-                <tbody>                    
-                    <tr><td>Performance</td><td class="highlight">Optimized Speed & Fast Loading</td><td class="warning">May Slow Due to Heavy Plugins</td></tr>                    
-                    <tr><td>Security</td><td class="highlight">Custom Architecture – Enhanced Protection</td><td class="warning">Plugin Dependency Risks</td></tr>                    
-                    <tr><td>Ownership</td><td class="highlight">Full Code Ownership & Control</td><td class="warning">Platform Dependent</td></tr>                    
-                    <tr><td>Scalability</td><td class="highlight">Flexible Growth Ready</td><td class="warning">Limited Customization</td></tr>                
-                </tbody>            
-            </table>
-            
-            <div style="margin-top:50px; border-top:1px solid #222; padding-top:40px; text-align: left;">                
-                <h3 style="color:var(--accent); margin-bottom:15px; font-size: 1.2rem;">Why Every Business Needs a Website</h3>                
-                <p style="color:#888; margin-bottom:30px; font-size: 0.95rem; line-height: 1.8;">A professional website builds credibility, increases visibility, and provides a 24/7 digital presence for your business. Customers today search online before making decisions. A fast, well-designed website helps establish trust, showcase services clearly, and generate consistent leads.</p>
-                <h3 style="color:var(--accent); margin-bottom:15px; font-size: 1.2rem;">Indian Domain Advantage (.in / .co.in)</h3>                
-                <p style="color:#888; margin-bottom:30px; font-size: 0.95rem; line-height: 1.8;">Using Indian domain extensions like <b>.in</b> or <b>.co.in</b> improves local trust and search relevance within India. Customers often prefer local domain businesses, and search engines prioritize region-specific domains for local results, improving visibility among Indian audiences.</p>
-                <h3 style="color:var(--accent); margin-bottom:15px; font-size: 1.2rem;">Power of Google SEO</h3>                
-                <p style="color:#888; font-size: 0.95rem; line-height: 1.8;">Search Engine Optimization (SEO) helps your business appear on Google when customers search for services. Proper SEO increases website traffic, builds brand authority, and reduces dependence on paid advertising. A technically optimized website ensures better ranking, faster loading, and long-term digital growth.</p>            
+                        <article class="package featured" style="--tone:#ffbe4f;">
+                            <span class="pill">Best Value</span>
+                            <h3>Business Pro</h3>
+                            <div class="price">&#8377;8,999 <small>/ launch</small></div>
+                            <ul class="package-list">
+                                <li><i class="fas fa-star"></i><span>4 to 6 pages website</span></li>
+                                <li><i class="fas fa-star"></i><span>Logo design and QR code support</span></li>
+                                <li><i class="fas fa-star"></i><span>500 business cards</span></li>
+                                <li><i class="fas fa-star"></i><span>SEO and Google location setup</span></li>
+                                <li><i class="fas fa-star"></i><span>Full branding identity support</span></li>
+                            </ul>
+                            <a class="btn btn-primary" href="https://wa.me/919961699196?text=Interested%20in%20Business%20Pro%20Package%20%E2%82%B98,999" target="_blank" rel="noreferrer">Select Business Pro</a>
+                        </article>
+                    </div>
+                </div>
             </div>
-            
-            <div style="margin-top:50px; border-top:1px solid #222; padding-top:40px; text-align: left;">                
-                <h3 style="color:var(--accent); margin-bottom:25px; font-size: 1.2rem;">Top HTML Sites (Indian Standard)</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
-                    <div style="background: #111; padding: 20px; border-radius: 10px; border: 1px solid #222;"><h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 8px;"><i class="fab fa-google" style="color: var(--accent); margin-right: 8px;"></i> Google India</h4><p style="color: #888; font-size: 0.8rem; line-height: 1.6;">The primary entry point for the Indian internet, serving as the leading portal for search, education, and news.</p></div>
-                    <div style="background: #111; padding: 20px; border-radius: 10px; border: 1px solid #222;"><h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 8px;"><i class="fab fa-youtube" style="color: var(--accent); margin-right: 8px;"></i> YouTube</h4><p style="color: #888; font-size: 0.8rem; line-height: 1.6;">India's dominant video-sharing platform, critical for regional language content and visual learning.</p></div>
-                    <div style="background: #111; padding: 20px; border-radius: 10px; border: 1px solid #222;"><h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 8px;"><i class="fab fa-instagram" style="color: var(--accent); margin-right: 8px;"></i> Instagram</h4><p style="color: #888; font-size: 0.8rem; line-height: 1.6;">The top visual networking site in the country, driven by high-speed Reels and mobile-first design.</p></div>
-                    <div style="background: #111; padding: 20px; border-radius: 10px; border: 1px solid #222;"><h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 8px;"><i class="fas fa-robot" style="color: var(--accent); margin-right: 8px;"></i> ChatGPT</h4><p style="color: #888; font-size: 0.8rem; line-height: 1.6;">The world’s fastest-growing AI service, heavily utilized by Indian users for productivity and learning.</p></div>
-                    <div style="background: #111; padding: 20px; border-radius: 10px; border: 1px solid #222;"><h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 8px;"><i class="fab fa-whatsapp" style="color: var(--accent); margin-right: 8px;"></i> WhatsApp Web</h4><p style="color: #888; font-size: 0.8rem; line-height: 1.6;">The essential business communication tool that connects the majority of Indian professional services.</p></div>
-                    <div style="background: #111; padding: 20px; border-radius: 10px; border: 1px solid #222;"><h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 8px;"><i class="fab fa-facebook" style="color: var(--accent); margin-right: 8px;"></i> Facebook</h4><p style="color: #888; font-size: 0.8rem; line-height: 1.6;">A massive ecosystem for local business promotion and community connectivity throughout India.</p></div>
-                    <div style="background: #111; padding: 20px; border-radius: 10px; border: 1px solid #222;"><h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 8px;"><i class="fab fa-amazon" style="color: var(--accent); margin-right: 8px;"></i> Amazon India</h4><p style="color: #888; font-size: 0.8rem; line-height: 1.6;">The gold standard for e-commerce performance, retail logistics, and digital consumer trust.</p></div>
-                    <div style="background: #111; padding: 20px; border-radius: 10px; border: 1px solid #222;"><h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 8px;"><i class="fas fa-shopping-cart" style="color: var(--accent); margin-right: 8px;"></i> Flipkart</h4><p style="color: #888; font-size: 0.8rem; line-height: 1.6;">India’s premier homegrown e-commerce giant, recognized for its massive domestic reach.</p></div>
-                    <div style="background: #111; padding: 20px; border-radius: 10px; border: 1px solid #222;"><h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 8px;"><i class="fab fa-wikipedia-w" style="color: var(--accent); margin-right: 8px;"></i> Wikipedia</h4><p style="color: #888; font-size: 0.8rem; line-height: 1.6;">The universal encyclopedia and primary reference hub for educational research across all regions.</p></div>
-                    <div style="background: #111; padding: 20px; border-radius: 10px; border: 1px solid #222;"><h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 8px;"><i class="fab fa-linkedin" style="color: var(--accent); margin-right: 8px;"></i> LinkedIn</h4><p style="color: #888; font-size: 0.8rem; line-height: 1.6;">The global professional standard for networking, recruitment, and corporate identity.</p></div>
-                </div>            
-            </div>        
-        </div>
-    </section>
+        </section>
+        <section class="section" id="services">
+            <div class="container">
+                <div class="panel section-panel">
+                    <div class="section-head">
+                        <div>
+                            <div class="section-kicker">Professional Services</div>
+                            <h2>Creative, technical, and business-facing services delivered under one brand.</h2>
+                        </div>
+                        <p>
+                            From logos and websites to local SEO, QR systems, specialty graphics, and print files, each
+                            service is structured to strengthen business presentation and market visibility.
+                        </p>
+                    </div>
 
-    <section id="establishment" class="page">        
-        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 40px;">            
-            <img src="images/me.png" alt="Aneesh K Rajeev" style="width: 200px; height: 200px; border-radius: 50%; border: 3px solid var(--accent); object-fit: cover;">        
-        </div>        
-        <div style="text-align:center; max-width:800px; margin: 0 auto;">            
-            <h2 style="color:var(--accent); font-size:2rem; margin-bottom:10px;">MAX EFEX</h2>            
-            <p style="color:#bbb;font-size:clamp(1.2rem,3vw,2rem);letter-spacing:3px;margin-bottom:20px;font-weight:500;text-transform:uppercase;">Graphics</p>
-            <p style="color:#888;">With over 15 years in visual branding, Max Efex combines creativity with practical business insight. We are also active Google Local Guides, contributing reviews, photos, and updates that help businesses gain better online visibility and trust. Our goal is simple — strong branding, better reach, and real customer connection.</p>        
-        </div>    
-    </section>
+                    <div class="about-grid">
+                        <div class="image-frame">
+                            <img src="images/services.png" alt="MAX EFEX services showcase">
+                        </div>
+                        <div class="cta-box">
+                            <strong>Built for real business use</strong>
+                            <p class="muted">
+                                Work is prepared not only for screens, but also for signage, packaging, glass applications,
+                                print production, QR campaigns, and field-ready brand presentation.
+                            </p>
+                        </div>
+                    </div>
 
-    <footer style="background:#080808; border-top:1px solid #111; padding:50px 10%;">
-        <div style="display:flex; flex-wrap:wrap; gap:40px; justify-content:space-between;">
-            <div style="flex:1; min-width:250px;">                
-                <h2 style="color:var(--accent); margin-bottom:10px;">MAX EFEX</h2>                
-                <p style="color:#777; font-size:0.9rem;">Premium logo • Branding • Websites • Digital Strategy.<br>Delivering professional visual solutions since 2011.</p>            
+                    <div class="services">
+                        <article class="service card"><div class="icon"><i class="fas fa-gem"></i></div><h3>Brand Identity &amp; Logo Design</h3><p class="muted">Professional identity systems prepared for signage, fabrication, digital presentation, and consistent brand visibility.</p></article>
+                        <article class="service card"><div class="icon"><i class="fas fa-bolt"></i></div><h3>Responsive Website Development</h3><p class="muted">Fast, secure, hand-built websites that strengthen credibility and support better customer engagement online.</p></article>
+                        <article class="service card"><div class="icon"><i class="fab fa-android"></i></div><h3>Android App Development</h3><p class="muted">Custom Android applications, WebView builds, and publishing support for businesses expanding their mobile presence.</p></article>
+                        <article class="service card"><div class="icon"><i class="fas fa-desktop"></i></div><h3>Windows Software</h3><p class="muted">Billing tools, automation software, and desktop applications aligned with operational efficiency.</p></article>
+                        <article class="service card"><div class="icon"><i class="fas fa-credit-card"></i></div><h3>Payment Integration</h3><p class="muted">UPI, Razorpay, and secure payment gateway integration for websites and business systems.</p></article>
+                        <article class="service card"><div class="icon"><i class="fas fa-qrcode"></i></div><h3>QR Code Solutions</h3><p class="muted">Dynamic and static QR solutions for payments, menus, promotions, and customer access points.</p></article>
+                        <article class="service card"><div class="icon"><i class="fab fa-google"></i></div><h3>Google Business &amp; SEO</h3><p class="muted">Location accuracy, visual updates, profile optimization, and local search improvements for stronger discovery.</p></article>
+                        <article class="service card"><div class="icon"><i class="fas fa-pen-nib"></i></div><h3>Specialty Graphics &amp; Glass</h3><p class="muted">Precision artwork for mementos, glass print layouts, etched concepts, and premium presentation materials.</p></article>
+                        <article class="service card"><div class="icon"><i class="fas fa-couch"></i></div><h3>Interior Design Architecture</h3><p class="muted">Spatial planning and presentation support informed by practical experience and premium layout thinking.</p></article>
+                        <article class="service card"><div class="icon"><i class="fas fa-microchip"></i></div><h3>AI Visual Architecture</h3><p class="muted">AI-assisted concepts and brand visuals developed to support identity presentation and creative communication.</p></article>
+                        <article class="service card"><div class="icon"><i class="fas fa-print"></i></div><h3>Ready-to-Print Files</h3><p class="muted">Production-ready CDR, AI, PDF, and CMYK layouts for banners, cards, wallpapers, and commercial print.</p></article>
+                        <article class="service card"><div class="icon"><i class="fas fa-layer-group"></i></div><h3>Complete Launch Support</h3><p class="muted">Coordinated planning across branding, digital presence, and communication assets from a single studio.</p></article>
+                    </div>
+                </div>
             </div>
-            <div style="flex:1; min-width:200px;">                
-                <h4 style="color:#fff; margin-bottom:15px;">Quick Links</h4>                
-                <p><a href="#services" style="color:#888; text-decoration:none;">Services</a></p>                
-                <p><a href="#offers" style="color:#888; text-decoration:none;">Offers</a></p>                
-                <p><a href="#technical" style="color:#888; text-decoration:none;">Technical</a></p>                
-                <p><a href="#about" style="color:#888; text-decoration:none;">About</a></p>            
+        </section>
+
+        <section class="section" id="technical">
+            <div class="container">
+                <div class="panel section-panel">
+                    <div class="section-head">
+                        <div>
+                            <div class="section-kicker">Technical Advantage</div>
+                            <h2>Custom development that gives businesses more control, performance, and long-term value.</h2>
+                        </div>
+                        <p>
+                            Hand-built websites reduce dependency on heavy plugins and generic templates, resulting in cleaner
+                            performance, stronger ownership, and better long-term flexibility.
+                        </p>
+                    </div>
+
+                    <div class="tech-grid">
+                        <div class="image-frame tech-visual">
+                            <img src="images/technical.png" alt="MAX EFEX technical performance showcase">
+                        </div>
+                        <div class="card" style="padding: 26px;">
+                            <div class="table-wrap">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Feature</th>
+                                            <th>MAX EFEX Custom Development</th>
+                                            <th>Standard Templates</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Performance</td>
+                                            <td class="highlight">Optimized speed and fast loading</td>
+                                            <td class="warning">Can slow down with heavy plugins</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Security</td>
+                                            <td class="highlight">Custom architecture with stronger protection</td>
+                                            <td class="warning">Higher plugin dependency risk</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ownership</td>
+                                            <td class="highlight">Full code ownership and control</td>
+                                            <td class="warning">Often platform dependent</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Scalability</td>
+                                            <td class="highlight">Flexible and growth ready</td>
+                                            <td class="warning">Customization may be limited</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="tech-notes" style="margin-top: 18px;">
+                                <div class="tech-note">
+                                    <strong>Why every business benefits from a website</strong>
+                                    <p class="muted">A professionally built website strengthens credibility, improves visibility, and remains available for customer discovery at all times.</p>
+                                </div>
+                                <div class="tech-note">
+                                    <strong>Indian domain advantage</strong>
+                                    <p class="muted">Using .in and .co.in can improve local trust while supporting stronger relevance within Indian search audiences.</p>
+                                </div>
+                                <div class="tech-note">
+                                    <strong>SEO as long-term growth</strong>
+                                    <p class="muted">A technically sound website supports stronger rankings, faster browsing, and reduced dependence on paid advertising.</p>
+                                </div>
+                            </div>
+
+                            <div class="tech-note" style="margin-top: 18px;">
+                                <strong>Top HTML Sites (Indian Standard)</strong>
+                                <div class="site-list">
+                                    <div class="site-item">
+                                        <h4><i class="fab fa-google"></i>Google India</h4>
+                                        <p class="muted">A primary gateway to the Indian internet and a benchmark for search, information access, and usability.</p>
+                                    </div>
+                                    <div class="site-item">
+                                        <h4><i class="fab fa-youtube"></i>YouTube</h4>
+                                        <p class="muted">A dominant video platform in India and a major benchmark for content visibility and media engagement.</p>
+                                    </div>
+                                    <div class="site-item">
+                                        <h4><i class="fab fa-instagram"></i>Instagram</h4>
+                                        <p class="muted">A major visual-first platform shaped by reels, creator culture, and mobile-driven discovery.</p>
+                                    </div>
+                                    <div class="site-item">
+                                        <h4><i class="fas fa-robot"></i>ChatGPT</h4>
+                                        <p class="muted">A widely used AI productivity platform for research, writing, planning, and business support.</p>
+                                    </div>
+                                    <div class="site-item">
+                                        <h4><i class="fab fa-whatsapp"></i>WhatsApp Web</h4>
+                                        <p class="muted">An essential communication platform connecting businesses and customers across India every day.</p>
+                                    </div>
+                                    <div class="site-item">
+                                        <h4><i class="fab fa-facebook"></i>Facebook</h4>
+                                        <p class="muted">A mature ecosystem for local business promotion, audience reach, and community communication.</p>
+                                    </div>
+                                    <div class="site-item">
+                                        <h4><i class="fab fa-amazon"></i>Amazon India</h4>
+                                        <p class="muted">A benchmark for e-commerce trust, retail logistics, and high-performance buying experiences.</p>
+                                    </div>
+                                    <div class="site-item">
+                                        <h4><i class="fas fa-shopping-cart"></i>Flipkart</h4>
+                                        <p class="muted">A leading Indian e-commerce brand recognized for strong domestic reach and digital familiarity.</p>
+                                    </div>
+                                    <div class="site-item">
+                                        <h4><i class="fab fa-wikipedia-w"></i>Wikipedia</h4>
+                                        <p class="muted">A global reference platform widely used for educational research and information discovery.</p>
+                                    </div>
+                                    <div class="site-item">
+                                        <h4><i class="fab fa-linkedin"></i>LinkedIn</h4>
+                                        <p class="muted">The professional standard for networking, recruitment, and corporate identity online.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div style="flex:1; min-width:250px;">                
-                <h4 style="color:#fff; margin-bottom:15px;">Contact</h4>                
-                <p style="color:#888;">📞 +91 99616 99196</p>                
-                <p style="color:#888;">📧 mediamaxefex@gmail.com</p>                
-                <p style="color:#888;">Kerala, India</p>            
+        </section>
+
+        <section class="section" id="founder">
+            <div class="container">
+                <div class="panel section-panel">
+                    <div class="founder-grid">
+                        <div class="founder-photo">
+                            <img src="images/me.png" alt="MAX EFEX founder portrait">
+                        </div>
+                        <div class="founder-copy">
+                            <div class="section-kicker">Brand Story</div>
+                            <h2>MAX EFEX Graphics</h2>
+                            <p>
+                                With over 15 years of experience in visual branding, MAX EFEX combines creative direction
+                                with practical business understanding. The studio supports businesses with branding, websites,
+                                design systems, and digital presentation that feels polished and dependable.
+                            </p>
+                            <p>
+                                Ongoing digital visibility support, business profile refinement, and presentation-focused design
+                                help clients improve trust, discoverability, and brand consistency.
+                            </p>
+                            <div class="chips">
+                                <span>Kerala, India</span>
+                                <span>Branding &amp; Visual Strategy</span>
+                                <span>Website &amp; SEO Support</span>
+                                <span>Premium Print &amp; Production Files</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <hr style="border:0; border-top:1px solid #111; margin:40px 0;">
-        <div style="text-align:center; color:#555; font-size:0.8rem;">            
-            © 2026 Max Efex Graphics. All Rights Reserved.<br>Designed & Engineered by Max Efex.        
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-panel">
+                <div class="footer-grid">
+                    <div>
+                        <div class="footer-brand" style="margin-bottom: 14px;">
+                            <img src="images/image_3.png" alt="MAX EFEX logo">
+                            <div>
+                                <strong>MAX EFEX</strong>
+                                <span>Graphics</span>
+                            </div>
+                        </div>
+                        <p>Professional logo design, branding, websites, digital strategy, and business-facing visual systems.</p>
+                        <div class="copyright">&copy; 2026 MAX EFEX Graphics. All Rights Reserved.</div>
+                    </div>
+
+                    <div>
+                        <h3>Quick Links</h3>
+                        <div class="footer-links">
+                            <a href="#about">About</a>
+                            <a href="#packages">Packages</a>
+                            <a href="#services">Services</a>
+                            <a href="#technical">Technical</a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>Direct Contact</h3>
+                        <div class="footer-links">
+                            <a href="tel:+919961699196">+91 99616 99196</a>
+                            <a href="mailto:mediamaxefex@gmail.com">mediamaxefex@gmail.com</a>
+                            <a href="mailto:studiomaxefex@gmail.com">studiomaxefex@gmail.com</a>
+                            <a href="https://wa.me/919961699196" target="_blank" rel="noreferrer">WhatsApp Instant Chat</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
