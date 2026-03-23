@@ -41,6 +41,69 @@
             margin-top: 6px;            
             text-transform: uppercase;        
         }
+
+        /* NEW PACKAGES SECTION STYLES */
+.package-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    gap: 20px; 
+    margin-top: 40px; 
+}
+
+.package-card { 
+    background: #0c0c0c; 
+    padding: 35px 20px; 
+    border-radius: 15px; 
+    border: 1px solid #1a1a1a; 
+    transition: 0.3s; 
+    position: relative; 
+    display: flex; 
+    flex-direction: column;
+}
+
+.package-card:hover { transform: translateY(-8px); }
+
+.package-card h3 { font-size: 1.3rem; margin-bottom: 15px; text-transform: uppercase; font-weight: 900; }
+.price { font-size: 2.5rem; font-weight: 900; margin-bottom: 25px; display: block; }
+
+.package-card ul { list-style: none; margin-bottom: 30px; flex-grow: 1; }
+.package-card li { font-size: 0.85rem; color: #aaa; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; text-align: left; }
+
+.btn-select { 
+    padding: 12px; 
+    border-radius: 4px; 
+    text-decoration: none; 
+    font-weight: 800; 
+    text-align: center; 
+    font-size: 0.75rem; 
+    transition: 0.3s; 
+    text-transform: uppercase;
+    background: transparent;
+}
+
+/* Color Coding */
+.p-starter { border-top: 4px solid #2ecc71; }
+.p-starter h3, .p-starter .price, .p-starter i { color: #2ecc71; }
+.btn-starter { border: 1px solid #2ecc71; color: #2ecc71; }
+.btn-starter:hover { background: #2ecc71; color: #000; }
+
+.p-standard { border-top: 4px solid #3498db; }
+.p-standard h3, .p-standard .price, .p-standard i { color: #3498db; }
+.btn-standard { border: 1px solid #3498db; color: #3498db; }
+.btn-standard:hover { background: #3498db; color: #000; }
+
+.p-premium { border-top: 4px solid #9b59b6; }
+.p-premium h3, .p-premium .price, .p-premium i { color: #9b59b6; }
+.btn-premium { border: 1px solid #9b59b6; color: #9b59b6; }
+.btn-premium:hover { background: #9b59b6; color: #000; }
+
+.p-bizpro { border-top: 4px solid #f1c40f; border-left: 1px solid #f1c40f; border-right: 1px solid #f1c40f; background: #0e0e0e; }
+.p-bizpro h3, .p-bizpro .price, .p-bizpro i { color: #f1c40f; }
+.btn-pro { background: #f1c40f; color: #000; border: none; }
+.btn-pro:hover { filter: brightness(1.2); }
+
+/* Badges */
+.badge { position: absolute; top: -10px; right: 20px; padding: 3px 10px; border-radius: 4px; font-weight: 900; font-size: 0.6rem; text-transform: uppercase; color: #000; }
         
         /* NAVIGATION */        
         nav {            
@@ -389,34 +452,68 @@
         </div>    
     </section>
 
-    <section id="offers" class="page" style="background: #050505;">        
-        <h2 class="section-h">Current Professional Offers</h2>        
-        
-        <img src="images/offers.png" alt="The Identity Bundle" class="section-featured-img">
+    <section id="offers" class="page" style="background: #050505;">
+    <h2 class="section-h">Web Design Packages</h2>
+    <p style="text-align: center; color: #666; margin-top: -15px; margin-bottom: 40px;">Professional business websites with 1 Year Domain & Hosting included.</p>
 
-        <div class="content-box" style="border: 2px solid var(--accent); position: relative; overflow: hidden;">            
-            <div style="background: var(--accent); color: #000; position: absolute; top: 20px; right: -35px; transform: rotate(45deg); padding: 5px 40px; font-weight: 900; font-size: 0.8rem;">BEST VALUE</div>            
-            <div style="text-align: center; margin-bottom: 40px;">                
-                <h3 style="font-size: 2.5rem; color: #fff; margin-bottom: 10px;">Full Identity Bundle</h3>                
-                <div style="font-size: 3rem; font-weight: 900; color: var(--accent);">₹8,999 <span style="font-size: 1rem; color: #666; text-decoration: line-through;">₹15,000</span></div>                
-                <p style="color: #888; letter-spacing: 1px;">EVERYTHING YOU NEED TO LAUNCH YOUR BRAND</p>            
-            </div>
-            <div class="service-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">                
-                <div class="service-card" style="background: #111;"><i class="fas fa-fingerprint"></i><h4>Premium Logo</h4><p>Architectural Vector files ready for CNC, signage, and digital use.</p></div>                
-                <div class="service-card" style="background: #111;"><i class="fas fa-code"></i><h4>Pro HTML Website</h4><p>High-speed, hand-coded responsive site with SEO optimization.</p></div>                
-                <div class="service-card" style="background: #111;"><i class="fas fa-address-card"></i><h4>Smart Business Cards</h4><p>500 Premium Printed Cards with Dynamic QR integration.</p></div>            
-            </div>
-            <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid #222;">                
-                <div class="service-grid">                    
-                    <div style="display: flex; gap: 15px; align-items: center;"><i class="fas fa-shield-halved" style="color: var(--accent); font-size: 1.5rem;"></i><div><h5 style="color: #fff;">24/7 MONITORING</h5><p style="font-size: 0.8rem; color: #666;">Continuous performance & uptime oversight.</p></div></div>                    
-                    <div style="display: flex; gap: 15px; align-items: center;"><i class="fas fa-sync" style="color: var(--accent); font-size: 1.5rem;"></i><div><h5 style="color: #fff;">3 FREE UPDATES YEARLY</h5><p style="font-size: 0.8rem; color: #666;">Professional content updates included.</p></div></div>                
-                </div>            
-            </div>            
-            <div style="text-align: center; margin-top: 40px;">                
-                <a href="https://wa.me/919961699196?text=I%20am%20interested%20in%20the%208999%20Offer" class="btn btn-wa" style="max-width: 300px; margin: 0 auto;">CLAIM THIS OFFER NOW</a>            
-            </div>        
-        </div>    
-    </section>
+    <img src="images/offers.png" alt="The Identity Bundle" class="section-featured-img">
+
+    <div class="package-grid">
+        <div class="package-card p-starter">
+            <h3>Starter</h3>
+            <div class="price">₹2,999</div>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> 1 Page Architecture</li>
+                <li><i class="fas fa-check-circle"></i> WhatsApp & Email Button</li>
+                <li><i class="fas fa-check-circle"></i> Google Map Integration</li>
+                <li><i class="fas fa-check-circle"></i> Mobile-Friendly Design</li>
+                <li><i class="fas fa-check-circle"></i> Supports .in / .co.in</li>
+            </ul>
+            <a href="https://wa.me/919961699196?text=Interested in Starter Package ₹2999" class="btn-select btn-starter">SELECT STARTER</a>
+        </div>
+
+        <div class="package-card p-standard">
+            <div class="badge" style="background: #3498db;">MOST POPULAR</div>
+            <h3>Standard</h3>
+            <div class="price">₹4,999</div>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> 2 to 4 Pages Website</li>
+                <li><i class="fas fa-check-circle"></i> Social Media Links</li>
+                <li><i class="fas fa-check-circle"></i> Customer Reviews Section</li>
+                <li><i class="fas fa-check-circle"></i> Clean Professional UI</li>
+                <li><i class="fas fa-check-circle"></i> Supports .in / .co.in</li>
+            </ul>
+            <a href="https://wa.me/919961699196?text=Interested in Standard Package ₹4999" class="btn-select btn-standard">SELECT STANDARD</a>
+        </div>
+
+        <div class="package-card p-premium">
+            <h3>Premium</h3>
+            <div class="price">₹6,999</div>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> 3 to 6 Pages Website</li>
+                <li><i class="fas fa-check-circle"></i> Instagram & YouTube Gallery</li>
+                <li><i class="fas fa-check-circle"></i> Google Reviews Display</li>
+                <li><i class="fas fa-check-circle"></i> Basic SEO Setup</li>
+                <li><i class="fas fa-check-circle"></i> Supports .in / .co.in / .com</li>
+            </ul>
+            <a href="https://wa.me/919961699196?text=Interested in Premium Package ₹6999" class="btn-select btn-premium">SELECT PREMIUM</a>
+        </div>
+
+        <div class="package-card p-bizpro">
+            <div class="badge" style="background: #f1c40f;">BEST VALUE</div>
+            <h3>Business Pro</h3>
+            <div class="price">₹8,999</div>
+            <ul>
+                <li><i class="fas fa-star"></i> 4 to 6 Pages Website</li>
+                <li><i class="fas fa-star"></i> Logo Design & QR Code</li>
+                <li><i class="fas fa-star"></i> 500 Business Cards</li>
+                <li><i class="fas fa-star"></i> SEO & Google Location Setup</li>
+                <li><i class="fas fa-star"></i> Full Branding Identity</li>
+            </ul>
+            <a href="https://wa.me/919961699196?text=Interested in Business Pro Package ₹8999" class="btn-select btn-pro">SELECT BUSINESS PRO</a>
+        </div>
+    </div>
+</section>
 
     <section id="services" class="page">
         <h2 class="section-h">PROFESSIONAL SERVICES</h2>
