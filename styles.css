@@ -789,6 +789,66 @@ th {
     .footer-panel {
         padding: 22px;
     }
+    /* Existing styles above */
+
+
+/* ===== Technical SEO Section Styling ===== */
+
+.technical-section {
+  background: #0f0f0f;
+  color: #ffffff;
+  padding: 60px 20px;
+}
+
+.tech-title {
+  text-align: center;
+  font-size: 32px;
+  color: #ff5a00;
+  margin-bottom: 15px;
+}
+
+.tech-description {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.tech-box {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+  border: 1px solid #222;
+}
+
+.tech-box:hover {
+  border-color: #ff5a00;
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.tech-box h3 {
+  color: #ff5a00;
+  margin-bottom: 10px;
+}
+
+.tech-box p {
+  color: #ccc;
+  font-size: 14px;
+}
 
     h1 {
         font-size: 2.5rem;
