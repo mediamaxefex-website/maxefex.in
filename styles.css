@@ -849,6 +849,23 @@ th {
   color: #ccc;
   font-size: 14px;
 }
+    /* GOOGLE BUSINESS CARD STYLES */
+.g-business-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 22px;
+    padding: 20px;
+    margin-top: 15px;
+}
+.g-rating { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; color: #f1c40f; }
+.g-rating strong { color: #fff; font-size: 1rem; }
+.g-info-item { display: flex; gap: 10px; margin-bottom: 10px; font-size: 0.85rem; color: #9ea7b3; }
+.g-info-item i { color: var(--accent); }
+.g-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
+.g-btn { padding: 10px; border-radius: 10px; text-align: center; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; text-decoration: none; transition: 0.3s; }
+.g-btn-directions { background: #34a853; color: white; }
+.g-btn-review { border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; background: rgba(255, 255, 255, 0.05); }
+.g-btn:hover { transform: translateY(-2px); filter: brightness(1.2); }
 
     h1 {
         font-size: 2.5rem;
