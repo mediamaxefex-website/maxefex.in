@@ -79,7 +79,16 @@ button {
     align-items: center;
     gap: 14px;
 }
+.portfolio-links a {
+    color: #ff8c00; /* Orange color to match your theme */
+    text-decoration: none;
+    transition: 0.3s;
+}
 
+.portfolio-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
 .brand img,
 .footer-brand img {
     width: 56px;
@@ -221,6 +230,7 @@ h4,
 .footer-grid,
 .services,
 .packages,
+.reviews-grid,
 .site-list,
 .stats,
 .social-links {
@@ -235,6 +245,7 @@ h4,
 .footer-grid,
 .services,
 .packages,
+.reviews-grid,
 .site-list,
 .stats,
 .social-links {
@@ -664,6 +675,91 @@ th {
     font-size: 0.84rem;
 }
 
+.reviews-grid {
+    margin-top: 24px;
+}
+
+.review-card,
+.g-business-card {
+    padding: 22px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(180deg, rgba(15, 19, 25, 0.9) 0%, rgba(22, 27, 34, 0.92) 100%);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.review-stars,
+.g-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.review-stars i,
+.g-rating i {
+    color: #ffc94d;
+}
+
+.review-source {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    color: var(--accent-soft);
+    font-weight: 700;
+}
+
+.g-business-card {
+    display: grid;
+    gap: 14px;
+}
+
+.g-map-embed {
+    overflow: hidden;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    height: 180px;
+}
+
+.g-map-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.g-info-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    color: var(--muted-strong);
+}
+
+.g-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.g-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 16px;
+    border-radius: 999px;
+    font-weight: 800;
+}
+
+.g-btn-directions {
+    background: linear-gradient(135deg, var(--accent), #ff944f);
+    color: #180d08;
+}
+
+.g-btn-review {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 .site-item h4 {
     display: flex;
     align-items: center;
@@ -726,6 +822,10 @@ th {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .reviews-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .stats {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -748,6 +848,10 @@ th {
 
     .packages {
         grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .reviews-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
@@ -789,85 +893,18 @@ th {
     .footer-panel {
         padding: 22px;
     }
-    /* Existing styles above */
-
-
-/* ===== Technical SEO Section Styling ===== */
-
-.technical-section {
-  background: #0f0f0f;
-  color: #ffffff;
-  padding: 60px 20px;
-}
-
-.tech-title {
-  text-align: center;
-  font-size: 32px;
-  color: #ff5a00;
-  margin-bottom: 15px;
-}
-
-.tech-description {
-  text-align: center;
-  max-width: 800px;
-  margin: auto;
-  color: #ccc;
-  margin-bottom: 40px;
-}
-
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-}
-
-.tech-box {
-  background: #1a1a1a;
-  padding: 25px;
-  border-radius: 12px;
-  text-align: center;
-  transition: 0.3s;
-  border: 1px solid #222;
-}
-
-.tech-box:hover {
-  border-color: #ff5a00;
-  transform: translateY(-5px);
-}
-
-.icon {
-  font-size: 40px;
-  margin-bottom: 15px;
-}
-
-.tech-box h3 {
-  color: #ff5a00;
-  margin-bottom: 10px;
-}
-
-.tech-box p {
-  color: #ccc;
-  font-size: 14px;
-}
-    /* GOOGLE BUSINESS CARD STYLES */
-.g-business-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 22px;
-    padding: 20px;
-    margin-top: 15px;
-}
-.g-rating { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; color: #f1c40f; }
-.g-rating strong { color: #fff; font-size: 1rem; }
-.g-info-item { display: flex; gap: 10px; margin-bottom: 10px; font-size: 0.85rem; color: #9ea7b3; }
-.g-info-item i { color: var(--accent); }
-.g-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
-.g-btn { padding: 10px; border-radius: 10px; text-align: center; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; text-decoration: none; transition: 0.3s; }
-.g-btn-directions { background: #34a853; color: white; }
-.g-btn-review { border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; background: rgba(255, 255, 255, 0.05); }
-.g-btn:hover { transform: translateY(-2px); filter: brightness(1.2); }
 
     h1 {
         font-size: 2.5rem;
     }
 }
+.performance-panel { margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; }
+.stats-row { display: flex; justify-content: space-between; margin-top: 10px; }
+.stat { text-align: center; }
+.score { 
+    display: block; width: 40px; height: 40px; 
+    line-height: 36px; border: 2px solid #00cc66; 
+    border-radius: 50%; color: #00cc66; 
+    font-weight: bold; font-size: 14px; margin: 0 auto 5px;
+}
+.stat small { font-size: 10px; opacity: 0.7; color: #fff; }
