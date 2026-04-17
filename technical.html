@@ -13,8 +13,91 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        @media (max-width: 760px) {
+            .technical-page .container {
+                width: min(var(--max), calc(100% - 20px));
+            }
+
+            .technical-page .section-panel {
+                padding: 18px;
+            }
+
+            .technical-page .section-head {
+                gap: 14px;
+                margin-bottom: 18px;
+            }
+
+            .technical-page .tech-grid {
+                gap: 16px;
+            }
+
+            .technical-page .tech-grid > * {
+                min-width: 0;
+            }
+
+            .technical-page .tech-visual {
+                padding: 16px;
+            }
+
+            .technical-page .technical-compare-card {
+                padding: 18px !important;
+                min-width: 0;
+                overflow: hidden;
+            }
+
+            .technical-page .table-wrap {
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                padding-bottom: 6px;
+            }
+
+            .technical-page table {
+                min-width: 520px;
+            }
+
+            .technical-page th,
+            .technical-page td {
+                padding: 12px 10px;
+                font-size: 0.92rem;
+            }
+
+            .technical-page th {
+                font-size: 0.68rem;
+            }
+
+            .technical-page .tech-note {
+                padding: 16px;
+            }
+
+            .technical-page .site-list {
+                grid-template-columns: 1fr;
+                gap: 14px;
+                margin-top: 14px !important;
+            }
+
+            .technical-page .site-item {
+                padding: 16px;
+            }
+
+            .technical-page .site-item h4 {
+                align-items: flex-start;
+                line-height: 1.35;
+            }
+
+            .technical-page .site-item h4 i {
+                margin-top: 4px;
+            }
+
+            .technical-page .site-item p,
+            .technical-page .tech-note p {
+                word-break: break-word;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="technical-page">
     <header class="site-header">
         <div class="container">
             <a href="index.html" class="brand">
@@ -60,7 +143,7 @@ alt="Technical SEO Workflow by MAX EFEX"
 width="618" height="520"
 loading="eager" decoding="async">
                         </div>
-                        <div class="card" style="padding: 26px;">
+                        <div class="card technical-compare-card" style="padding: 26px;">
                             <div class="table-wrap">
                                 <table>
                                     <thead>
