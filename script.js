@@ -38,7 +38,7 @@ if (galleryContainer) {
     const repo = "maxefex.in";
     const folder = "gallery";
 
-    fetch(`https://api.github.com/repos/${username}/${repo}/contents/${folder}`)
+     fetch(`https://api.github.com/repos/${username}/${repo}/contents/${folder}`)
         .then((response) => response.json())
         .then((data) => {
             if (!Array.isArray(data)) {
