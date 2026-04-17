@@ -34,7 +34,7 @@ document.querySelectorAll("[data-nav-link]").forEach((link) => {
 const galleryContainer = document.getElementById("gallery-container");
 
 if (galleryContainer) {
-    const username = "media-maxefex";
+    const username = "mediamaxefex-website";
     const repo = "maxefex.in";
     const folder = "gallery";
 
