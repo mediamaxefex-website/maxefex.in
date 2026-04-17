@@ -36,7 +36,7 @@ const galleryContainer = document.getElementById("gallery-container");
 if (galleryContainer) {
     const username = "media-maxefex";
     const repo = "maxefex.in";
-    const folder = "images";
+    const folder = "gallery";
 
     fetch(`https://api.github.com/repos/${username}/${repo}/contents/${folder}`)
         .then((response) => response.json())
