@@ -873,14 +873,21 @@ th {
 }
 
 @media (min-width: 900px) {
+
     .hero-grid {
         grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
     }
 
     .about-grid,
-    .tech-grid,
     .founder-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* TECHNICAL PAGE FIX */
+    .tech-grid {
+        grid-template-columns: 2fr 1fr;
+        gap: 32px;
+        align-items: start;
     }
 
     .packages {
