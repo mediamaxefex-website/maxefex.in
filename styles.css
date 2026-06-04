@@ -891,7 +891,7 @@ th {
 
     /* TECHNICAL PAGE BALANCED LAYOUT */
     .tech-grid {
-        grid-template-columns: 58% 42%;
+        grid-template-columns: 40% 60%;
         gap: 32px;
         align-items: start;
     }
