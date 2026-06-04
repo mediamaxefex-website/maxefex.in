@@ -888,9 +888,9 @@ th {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    /* TECHNICAL PAGE FIX */
+    /* TECHNICAL PAGE BALANCED LAYOUT */
     .tech-grid {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 58% 42%;
         gap: 32px;
         align-items: start;
     }
