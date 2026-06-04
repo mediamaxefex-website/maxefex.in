@@ -518,7 +518,8 @@ p {
 
 .tech-visual img {
     width: 100%;
-    max-width: 900px;
+    max-width: 700px;
+    height: auto;
     max-height: none;
     object-fit: contain;
     object-position: center;
@@ -1155,4 +1156,18 @@ th {
     .authority-bar { 
         grid-template-columns: 1fr; 
     }
+}
+.site-item,
+.tech-note {
+    padding: 24px;
+}
+
+.site-item h4 {
+    font-size: 1.1rem;
+}
+
+.site-item p,
+.tech-note p {
+    font-size: 1rem;
+    line-height: 1.7;
 }
