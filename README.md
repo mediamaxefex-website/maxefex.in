@@ -5,6 +5,7 @@
 ## 📍 Contact & Visual Portfolio
 - **Official Website:** [https://maxefex.in](https://maxefex.in)
 - **Instagram (Creative Work):** [dezigner_maxefex](https://instagram.com/dezigner_maxefex)
+- **Official Facebook:** [MAX EFEX Graphics](https://www.facebook.com/MAXEFEX/)
 - **Pixabay (Design Assets):** [maxefex-5447583](https://pixabay.com/users/maxefex-5447583/)
 - **WhatsApp Chat:** [+91 99616 99196](https://wa.me/919961699196)
 
