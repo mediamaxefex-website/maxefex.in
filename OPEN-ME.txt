@@ -1,0 +1,15 @@
+MAX EFEX GRAPHICS — COMPLETE WEBSITE PACKAGE
+
+1. Extract the ENTIRE ZIP to a new folder using Extract All / Extract To.
+2. Keep index.html, the other pages, JS/CSS files and images folder together.
+3. Open the extracted index.html in Chrome, Edge or another modern browser.
+
+The logo, studio assistant, gallery, package planner and care-quotation form work
+when opened directly from the extracted folder. Do not open just index.html from
+inside WinRAR, because archive viewers may use an incomplete temporary folder.
+
+For your hosting, upload the contents of this folder to the website root.
+The installable/offline web-app feature requires HTTPS or a local HTTP server.
+WhatsApp, maps and other external links need an internet connection.
+
+No installation, API key or build command is needed for the studio assistant.
