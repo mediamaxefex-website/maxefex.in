@@ -313,6 +313,23 @@
     <div class="container footer-utility"><span>Branding · Digital experiences · Production</span><div><span data-offline-state hidden></span><a href="technical.html#project-planner">Plan your project ↗</a><button type="button" data-install-app hidden>Install studio app ↗</button><a href="#top">Back to top ↑</a></div></div></footer>
 
     
-<script src="script.js" defer></script><script src="brand.js" defer></script><script src="chatbot.js" defer></script><script src="client-tools.js" defer></script><script src="care.js" defer></script></body>
+<script src="script.js" defer></script><script src="brand.js" defer></script><script src="chatbot.js" defer></script><script src="client-tools.js" defer></script><script src="care.js" defer></script>  <script>
+    document.addEventListener("click", function (event) {
+      const link = event.target.closest('article.package a[href^="https://wa.me/"]');
+      if (!link) return;
+      const card = link.closest("article.package");
+      const name = card.querySelector("h3")?.textContent.trim();
+      const amount = card.querySelector(".price")?.textContent.match(/₹\s*([\d,]+)/);
+      if (!name || !amount) return;
+      const price = Number(amount[1].replace(/,/g, ""));
+      gtag("event", "package_enquiry_click", {
+        package_name: name,
+        package_price: price,
+        currency: "INR",
+        contact_method: "whatsapp"
+      });
+    });
+  </script>
+</body>
 
 </html>
