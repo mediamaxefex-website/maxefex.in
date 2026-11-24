@@ -34,3 +34,13 @@ document.addEventListener('click', function (event) {
   const platform = platforms.get(host);
   if (platform) window.gtag('event', platform + '_click', { social_platform: platform });
 }, true);
+
+document.addEventListener("click", function (event) {
+  const link = event.target.closest("a[href]");
+  if (!link || typeof window.gtag !== "function") return;
+  const host = link.hostname.replace(/^www\./, "");
+  if (host === "maps.app.goo.gl" || host === "maps.google.com" ||
+      (host === "google.com" && link.pathname.startsWith("/maps"))) {
+    window.gtag("event", "google_maps_click", { map_location: link.href.split("?")[0] });
+  }
+}, true);
