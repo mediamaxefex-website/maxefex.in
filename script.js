@@ -20,3 +20,17 @@ window.addEventListener('appinstalled',()=>{installPrompt=null;installButtons.fo
 const offline=document.createElement('div');offline.className='offline-notice';offline.setAttribute('role','status');offline.textContent='You’re offline. Saved pages and the guided assistant are available. Prices may have changed; contact the studio when connected.';document.querySelector('.site-header')?.after(offline);
 function updateConnection(){offline.hidden=navigator.onLine;}updateConnection();window.addEventListener('online',updateConnection);window.addEventListener('offline',updateConnection);
 if('serviceWorker' in navigator&&(location.protocol==='https:'||location.hostname==='127.0.0.1'||location.hostname==='localhost')){window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').then(()=>navigator.serviceWorker.ready).then(()=>{document.querySelectorAll('[data-offline-state]').forEach(el=>{el.hidden=false;el.textContent='Offline essentials saved';});}).catch(()=>{/* Regular browsing remains available if offline features are blocked. */});});}
+
+document.addEventListener('click', function (event) {
+  const link = event.target.closest('a[href]');
+  if (!link || typeof window.gtag !== 'function') return;
+
+  const host = link.hostname.replace(/^www\./, '');
+  const platforms = new Map([
+    ['facebook.com', 'facebook'], ['instagram.com', 'instagram'],
+    ['wa.me', 'whatsapp'], ['web.whatsapp.com', 'whatsapp'],
+    ['api.whatsapp.com', 'whatsapp']
+  ]);
+  const platform = platforms.get(host);
+  if (platform) window.gtag('event', platform + '_click', { social_platform: platform });
+}, true);
